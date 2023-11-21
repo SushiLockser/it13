@@ -24,6 +24,7 @@ Partial Class sideBar
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(sideBar))
         Me.pagePlaceholder = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.btnDashboardPage = New System.Windows.Forms.Button()
@@ -33,17 +34,35 @@ Partial Class sideBar
         Me.btnAccountPage = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.pagePlaceholder.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'pagePlaceholder
         '
         Me.pagePlaceholder.BackColor = System.Drawing.Color.Transparent
+        Me.pagePlaceholder.Controls.Add(Me.Panel3)
+        Me.pagePlaceholder.Controls.Add(Me.Label3)
+        Me.pagePlaceholder.Controls.Add(Me.Label2)
         Me.pagePlaceholder.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pagePlaceholder.Location = New System.Drawing.Point(260, 0)
         Me.pagePlaceholder.Name = "pagePlaceholder"
         Me.pagePlaceholder.Size = New System.Drawing.Size(987, 756)
         Me.pagePlaceholder.TabIndex = 10
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Helvetica", 30.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(332, 198)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(285, 60)
+        Me.Label2.TabIndex = 17
+        Me.Label2.Text = "WELCOME"
         '
         'Panel1
         '
@@ -176,6 +195,27 @@ Partial Class sideBar
         Me.Panel2.Size = New System.Drawing.Size(40, 40)
         Me.Panel2.TabIndex = 3
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Helvetica", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(276, 470)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(393, 47)
+        Me.Label3.TabIndex = 18
+        Me.Label3.Text = "Click a button to start"
+        '
+        'Panel3
+        '
+        Me.Panel3.BackgroundImage = Global.IT13_Proj_2.My.Resources.Resources.Untitled_design__1_
+        Me.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel3.Location = New System.Drawing.Point(376, 280)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(173, 175)
+        Me.Panel3.TabIndex = 19
+        '
         'sideBar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -186,6 +226,8 @@ Partial Class sideBar
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "sideBar"
         Me.Text = "Dashboard"
+        Me.pagePlaceholder.ResumeLayout(False)
+        Me.pagePlaceholder.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
@@ -202,4 +244,7 @@ Partial Class sideBar
     Friend WithEvents BtnEcoPage As Button
     Friend WithEvents btnLogout As Button
     Friend WithEvents pagePlaceholder As Panel
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Label3 As Label
 End Class
