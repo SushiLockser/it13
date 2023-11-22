@@ -10,15 +10,15 @@
         childForm(dashboardPage)
     End Sub
 
-    Private Sub pagePlaceholder_Paint(sender As Object, e As PaintEventArgs) Handles pagePlaceholder.Paint
-
-    End Sub
-
     Private Sub btnSearchPage_Click(sender As Object, e As EventArgs) Handles btnSearchPage.Click
         childForm(SearchPage)
     End Sub
 
     Private Sub BtnEcoPage_Click(sender As Object, e As EventArgs) Handles BtnEcoPage.Click
         childForm(EconomicPage)
+    End Sub
+
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+
     End Sub
 End Class
