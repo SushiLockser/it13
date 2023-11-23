@@ -24,14 +24,14 @@ Partial Class SignUpPage
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SignUpPage))
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
+        Me.lblLogin = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.btnCreate = New System.Windows.Forms.Button()
+        Me.txtName = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -44,14 +44,14 @@ Partial Class SignUpPage
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.Snow
-        Me.Panel2.Controls.Add(Me.TextBox4)
+        Me.Panel2.Controls.Add(Me.txtEmail)
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Controls.Add(Me.TextBox3)
+        Me.Panel2.Controls.Add(Me.txtPassword)
         Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Controls.Add(Me.Label8)
+        Me.Panel2.Controls.Add(Me.lblLogin)
         Me.Panel2.Controls.Add(Me.Label7)
-        Me.Panel2.Controls.Add(Me.Button1)
-        Me.Panel2.Controls.Add(Me.TextBox1)
+        Me.Panel2.Controls.Add(Me.btnCreate)
+        Me.Panel2.Controls.Add(Me.txtName)
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.Label3)
@@ -61,14 +61,14 @@ Partial Class SignUpPage
         Me.Panel2.Size = New System.Drawing.Size(288, 479)
         Me.Panel2.TabIndex = 4
         '
-        'TextBox4
+        'txtEmail
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Arial", 10.0!)
-        Me.TextBox4.Location = New System.Drawing.Point(30, 280)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(229, 23)
-        Me.TextBox4.TabIndex = 12
+        Me.txtEmail.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.txtEmail.Location = New System.Drawing.Point(30, 280)
+        Me.txtEmail.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(229, 23)
+        Me.txtEmail.TabIndex = 12
         '
         'Label2
         '
@@ -81,14 +81,14 @@ Partial Class SignUpPage
         Me.Label2.TabIndex = 11
         Me.Label2.Text = "Email"
         '
-        'TextBox3
+        'txtPassword
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Arial", 10.0!)
-        Me.TextBox3.Location = New System.Drawing.Point(30, 340)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(229, 23)
-        Me.TextBox3.TabIndex = 10
+        Me.txtPassword.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.txtPassword.Location = New System.Drawing.Point(30, 340)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.Size = New System.Drawing.Size(229, 23)
+        Me.txtPassword.TabIndex = 10
         '
         'Label1
         '
@@ -101,17 +101,17 @@ Partial Class SignUpPage
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Password"
         '
-        'Label8
+        'lblLogin
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Label8.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label8.Location = New System.Drawing.Point(184, 443)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(41, 15)
-        Me.Label8.TabIndex = 8
-        Me.Label8.Text = "Log In"
+        Me.lblLogin.AutoSize = True
+        Me.lblLogin.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.lblLogin.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.lblLogin.Location = New System.Drawing.Point(199, 443)
+        Me.lblLogin.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblLogin.Name = "lblLogin"
+        Me.lblLogin.Size = New System.Drawing.Size(41, 15)
+        Me.lblLogin.TabIndex = 8
+        Me.lblLogin.Text = "Log In"
         '
         'Label7
         '
@@ -124,28 +124,28 @@ Partial Class SignUpPage
         Me.Label7.TabIndex = 7
         Me.Label7.Text = "Login your Admin Account"
         '
-        'Button1
+        'btnCreate
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.Highlight
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold)
-        Me.Button1.ForeColor = System.Drawing.Color.Snow
-        Me.Button1.Location = New System.Drawing.Point(30, 391)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(228, 32)
-        Me.Button1.TabIndex = 6
-        Me.Button1.Text = "Create Account"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnCreate.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCreate.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.btnCreate.ForeColor = System.Drawing.Color.Snow
+        Me.btnCreate.Location = New System.Drawing.Point(30, 391)
+        Me.btnCreate.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnCreate.Name = "btnCreate"
+        Me.btnCreate.Size = New System.Drawing.Size(228, 32)
+        Me.btnCreate.TabIndex = 6
+        Me.btnCreate.Text = "Create Account"
+        Me.btnCreate.UseVisualStyleBackColor = False
         '
-        'TextBox1
+        'txtName
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Arial", 10.0!)
-        Me.TextBox1.Location = New System.Drawing.Point(30, 219)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(229, 23)
-        Me.TextBox1.TabIndex = 3
+        Me.txtName.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.txtName.Location = New System.Drawing.Point(30, 219)
+        Me.txtName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtName.Name = "txtName"
+        Me.txtName.Size = New System.Drawing.Size(229, 23)
+        Me.txtName.TabIndex = 3
         '
         'Label5
         '
@@ -240,16 +240,16 @@ Partial Class SignUpPage
     End Sub
 
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Label8 As Label
+    Friend WithEvents lblLogin As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents btnCreate As Button
+    Friend WithEvents txtName As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtPassword As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtEmail As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
