@@ -28,7 +28,6 @@ Partial Class StaffSideBar
         Me.btnDashboardPage = New System.Windows.Forms.Button()
         Me.btnProjectPage = New System.Windows.Forms.Button()
         Me.btnSearchPage = New System.Windows.Forms.Button()
-        Me.BtnEcoPage = New System.Windows.Forms.Button()
         Me.btnAccountPage = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -49,7 +48,6 @@ Partial Class StaffSideBar
         Me.Panel1.Controls.Add(Me.btnDashboardPage)
         Me.Panel1.Controls.Add(Me.btnProjectPage)
         Me.Panel1.Controls.Add(Me.btnSearchPage)
-        Me.Panel1.Controls.Add(Me.BtnEcoPage)
         Me.Panel1.Controls.Add(Me.btnAccountPage)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Panel2)
@@ -118,21 +116,6 @@ Partial Class StaffSideBar
         Me.btnSearchPage.TabIndex = 13
         Me.btnSearchPage.Text = "Search"
         Me.btnSearchPage.UseVisualStyleBackColor = False
-        '
-        'BtnEcoPage
-        '
-        Me.BtnEcoPage.BackColor = System.Drawing.Color.Transparent
-        Me.BtnEcoPage.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnEcoPage.Font = New System.Drawing.Font("Helvetica", 10.0!)
-        Me.BtnEcoPage.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnEcoPage.Image = Global.IT13_Proj_2.My.Resources.Resources.Insert_chart_outlined
-        Me.BtnEcoPage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEcoPage.Location = New System.Drawing.Point(-3, 265)
-        Me.BtnEcoPage.Name = "BtnEcoPage"
-        Me.BtnEcoPage.Size = New System.Drawing.Size(260, 58)
-        Me.BtnEcoPage.TabIndex = 12
-        Me.BtnEcoPage.Text = "Economic Trends"
-        Me.BtnEcoPage.UseVisualStyleBackColor = False
         '
         'btnAccountPage
         '
@@ -239,7 +222,6 @@ Partial Class StaffSideBar
     Friend WithEvents btnDashboardPage As Button
     Friend WithEvents btnProjectPage As Button
     Friend WithEvents btnSearchPage As Button
-    Friend WithEvents BtnEcoPage As Button
     Friend WithEvents btnAccountPage As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel2 As Panel

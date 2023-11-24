@@ -94,6 +94,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddProduct.Designer.vb">
+      <DependentUpon>AddProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AddProject.Designer.vb">
       <DependentUpon>AddProject.vb</DependentUpon>
     </Compile>
@@ -196,6 +202,12 @@
     <Compile Include="ViewEconomicPage.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ViewProject.Designer.vb">
+      <DependentUpon>ViewProject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewProject.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="WelcomePage.Designer.vb">
       <DependentUpon>WelcomePage.vb</DependentUpon>
     </Compile>
@@ -204,6 +216,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddProduct.resx">
+      <DependentUpon>AddProduct.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddProject.resx">
       <DependentUpon>AddProject.vb</DependentUpon>
     </EmbeddedResource>
@@ -251,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewEconomicPage.resx">
       <DependentUpon>ViewEconomicPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewProject.resx">
+      <DependentUpon>ViewProject.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomePage.resx">
       <DependentUpon>WelcomePage.vb</DependentUpon>

@@ -27,8 +27,6 @@ Partial Class EditProductPage
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DomainUpDown1 = New System.Windows.Forms.DomainUpDown()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -45,6 +43,8 @@ Partial Class EditProductPage
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label2
@@ -82,37 +82,6 @@ Partial Class EditProductPage
         Me.TextBox2.Size = New System.Drawing.Size(253, 27)
         Me.TextBox2.TabIndex = 33
         Me.TextBox2.Text = "25"
-        '
-        'Button9
-        '
-        Me.Button9.BackColor = System.Drawing.Color.Firebrick
-        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button9.Font = New System.Drawing.Font("Helvetica", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button9.ForeColor = System.Drawing.Color.White
-        Me.Button9.Image = Global.IT13_Proj_2.My.Resources.Resources.Add_box__1_
-        Me.Button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button9.Location = New System.Drawing.Point(889, 188)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(34, 30)
-        Me.Button9.TabIndex = 40
-        Me.Button9.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button9.UseVisualStyleBackColor = False
-        '
-        'Button8
-        '
-        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(120, Byte), Integer))
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button8.Font = New System.Drawing.Font("Helvetica", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.ForeColor = System.Drawing.Color.White
-        Me.Button8.Image = Global.IT13_Proj_2.My.Resources.Resources.Add_box__1_
-        Me.Button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button8.Location = New System.Drawing.Point(753, 187)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(130, 30)
-        Me.Button8.TabIndex = 39
-        Me.Button8.Text = "Edit Item"
-        Me.Button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button8.UseVisualStyleBackColor = False
         '
         'Label7
         '
@@ -271,11 +240,39 @@ Partial Class EditProductPage
         Me.Button1.Text = "< back"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Button8
+        '
+        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button8.Font = New System.Drawing.Font("Helvetica", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.ForeColor = System.Drawing.Color.White
+        Me.Button8.Image = Global.IT13_Proj_2.My.Resources.Resources.Add_box__1_
+        Me.Button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button8.Location = New System.Drawing.Point(724, 173)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(159, 44)
+        Me.Button8.TabIndex = 39
+        Me.Button8.Text = "Edit Product"
+        Me.Button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button8.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Firebrick
+        Me.Button2.BackgroundImage = Global.IT13_Proj_2.My.Resources.Resources.Frame_123__1_
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Button2.Location = New System.Drawing.Point(889, 173)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(50, 44)
+        Me.Button2.TabIndex = 53
+        Me.Button2.UseVisualStyleBackColor = False
+        '
         'EditProductPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(969, 709)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
@@ -290,7 +287,6 @@ Partial Class EditProductPage
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.DomainUpDown1)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Button9)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Button8)
@@ -311,7 +307,6 @@ Partial Class EditProductPage
     Friend WithEvents Panel1 As Panel
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents DomainUpDown1 As DomainUpDown
-    Friend WithEvents Button9 As Button
     Friend WithEvents Button8 As Button
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
@@ -329,4 +324,5 @@ Partial Class EditProductPage
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class
