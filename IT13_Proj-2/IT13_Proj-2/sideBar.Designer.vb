@@ -24,10 +24,11 @@ Partial Class sideBar
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(sideBar))
         Me.pagePlaceholder = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.btnDashboardPage = New System.Windows.Forms.Button()
@@ -37,7 +38,6 @@ Partial Class sideBar
         Me.btnAccountPage = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.pagePlaceholder.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -53,15 +53,6 @@ Partial Class sideBar
         Me.pagePlaceholder.Name = "pagePlaceholder"
         Me.pagePlaceholder.Size = New System.Drawing.Size(987, 756)
         Me.pagePlaceholder.TabIndex = 10
-        '
-        'Panel3
-        '
-        Me.Panel3.BackgroundImage = Global.IT13_Proj_2.My.Resources.Resources.Untitled_design__1_
-        Me.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel3.Location = New System.Drawing.Point(376, 280)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(173, 175)
-        Me.Panel3.TabIndex = 19
         '
         'Label3
         '
@@ -87,6 +78,15 @@ Partial Class sideBar
         Me.Label2.TabIndex = 17
         Me.Label2.Text = "WELCOME"
         '
+        'Panel3
+        '
+        Me.Panel3.BackgroundImage = Global.IT13_Proj_2.My.Resources.Resources.Untitled_design__1_
+        Me.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel3.Location = New System.Drawing.Point(376, 280)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(173, 175)
+        Me.Panel3.TabIndex = 19
+        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
@@ -107,6 +107,21 @@ Partial Class sideBar
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(260, 756)
         Me.Panel1.TabIndex = 0
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button1.Font = New System.Drawing.Font("Helvetica", 10.0!)
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button1.Image = Global.IT13_Proj_2.My.Resources.Resources.tabler_icon_users__1_
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(0, 322)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(260, 58)
+        Me.Button1.TabIndex = 18
+        Me.Button1.Text = "Staff Accounts"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Label4
         '
@@ -231,21 +246,6 @@ Partial Class sideBar
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(40, 40)
         Me.Panel2.TabIndex = 3
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Font = New System.Drawing.Font("Helvetica", 10.0!)
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button1.Image = Global.IT13_Proj_2.My.Resources.Resources.Insert_chart_outlined
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(0, 322)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(260, 58)
-        Me.Button1.TabIndex = 18
-        Me.Button1.Text = "Staff Accounts"
-        Me.Button1.UseVisualStyleBackColor = False
         '
         'sideBar
         '

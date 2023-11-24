@@ -94,6 +94,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddProject.Designer.vb">
+      <DependentUpon>AddProject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddProject.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CreateAccount.Designer.vb">
       <DependentUpon>CreateAccount.vb</DependentUpon>
     </Compile>
@@ -126,10 +132,10 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="mod_staff_db.vb" />
-    <Compile Include="SignUpPage.Designer.vb">
-      <DependentUpon>SignUpPage.vb</DependentUpon>
+    <Compile Include="Profile.Designer.vb">
+      <DependentUpon>Profile.vb</DependentUpon>
     </Compile>
-    <Compile Include="SignUpPage.vb">
+    <Compile Include="Profile.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="sideBar.Designer.vb">
@@ -184,6 +190,12 @@
     <Compile Include="StaffSideBar.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ViewEconomicPage.Designer.vb">
+      <DependentUpon>ViewEconomicPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewEconomicPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="WelcomePage.Designer.vb">
       <DependentUpon>WelcomePage.vb</DependentUpon>
     </Compile>
@@ -192,6 +204,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddProject.resx">
+      <DependentUpon>AddProject.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateAccount.resx">
       <DependentUpon>CreateAccount.vb</DependentUpon>
     </EmbeddedResource>
@@ -207,8 +222,8 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignUpPage.resx">
-      <DependentUpon>SignUpPage.vb</DependentUpon>
+    <EmbeddedResource Include="Profile.resx">
+      <DependentUpon>Profile.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sideBar.resx">
       <DependentUpon>sideBar.vb</DependentUpon>
@@ -233,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StaffSideBar.resx">
       <DependentUpon>StaffSideBar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewEconomicPage.resx">
+      <DependentUpon>ViewEconomicPage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomePage.resx">
       <DependentUpon>WelcomePage.vb</DependentUpon>
@@ -304,6 +322,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Add box %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 123 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabler-icon-users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabler-icon-users %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
