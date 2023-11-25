@@ -36,7 +36,7 @@ Partial Class WelcomePage
         Me.Panel1.BackgroundImage = Global.IT13_Proj_2.My.Resources.Resources.Untitled_design__1_
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel1.Location = New System.Drawing.Point(348, 73)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(202, 206)
         Me.Panel1.TabIndex = 0
@@ -48,7 +48,7 @@ Partial Class WelcomePage
         Me.btnAdmin.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold)
         Me.btnAdmin.ForeColor = System.Drawing.Color.Snow
         Me.btnAdmin.Location = New System.Drawing.Point(240, 479)
-        Me.btnAdmin.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnAdmin.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAdmin.Name = "btnAdmin"
         Me.btnAdmin.Size = New System.Drawing.Size(181, 32)
         Me.btnAdmin.TabIndex = 7
@@ -62,7 +62,7 @@ Partial Class WelcomePage
         Me.btnStaff.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold)
         Me.btnStaff.ForeColor = System.Drawing.Color.Snow
         Me.btnStaff.Location = New System.Drawing.Point(478, 479)
-        Me.btnStaff.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnStaff.Margin = New System.Windows.Forms.Padding(2)
         Me.btnStaff.Name = "btnStaff"
         Me.btnStaff.Size = New System.Drawing.Size(181, 32)
         Me.btnStaff.TabIndex = 8
@@ -115,7 +115,7 @@ Partial Class WelcomePage
         Me.Controls.Add(Me.btnAdmin)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "WelcomePage"
         Me.Text = "WelcomePage"
         Me.ResumeLayout(False)

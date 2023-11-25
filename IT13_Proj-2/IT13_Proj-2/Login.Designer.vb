@@ -27,10 +27,10 @@ Partial Class Login
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnLogin = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -56,7 +56,7 @@ Partial Class Login
         Me.Panel1.BackgroundImage = Global.IT13_Proj_2.My.Resources.Resources.Untitled_design__1_
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel1.Location = New System.Drawing.Point(9, 10)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(30, 32)
         Me.Panel1.TabIndex = 16
@@ -65,15 +65,15 @@ Partial Class Login
         '
         Me.Panel2.BackColor = System.Drawing.Color.Snow
         Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Controls.Add(Me.TextBox4)
+        Me.Panel2.Controls.Add(Me.txtPassword)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.btnLogin)
-        Me.Panel2.Controls.Add(Me.TextBox1)
+        Me.Panel2.Controls.Add(Me.txtEmail)
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Location = New System.Drawing.Point(544, 81)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(288, 404)
         Me.Panel2.TabIndex = 19
@@ -90,14 +90,14 @@ Partial Class Login
         Me.Label1.TabIndex = 13
         Me.Label1.Text = "[Admin]"
         '
-        'TextBox4
+        'txtPassword
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Arial", 10.0!)
-        Me.TextBox4.Location = New System.Drawing.Point(30, 228)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(229, 23)
-        Me.TextBox4.TabIndex = 12
+        Me.txtPassword.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.txtPassword.Location = New System.Drawing.Point(30, 228)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.Size = New System.Drawing.Size(229, 23)
+        Me.txtPassword.TabIndex = 12
         '
         'Label2
         '
@@ -117,21 +117,21 @@ Partial Class Login
         Me.btnLogin.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold)
         Me.btnLogin.ForeColor = System.Drawing.Color.Snow
         Me.btnLogin.Location = New System.Drawing.Point(30, 301)
-        Me.btnLogin.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnLogin.Margin = New System.Windows.Forms.Padding(2)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(228, 32)
         Me.btnLogin.TabIndex = 6
         Me.btnLogin.Text = "Login"
         Me.btnLogin.UseVisualStyleBackColor = False
         '
-        'TextBox1
+        'txtEmail
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Arial", 10.0!)
-        Me.TextBox1.Location = New System.Drawing.Point(30, 150)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(229, 23)
-        Me.TextBox1.TabIndex = 3
+        Me.txtEmail.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.txtEmail.Location = New System.Drawing.Point(30, 150)
+        Me.txtEmail.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(229, 23)
+        Me.txtEmail.TabIndex = 3
         '
         'Label5
         '
@@ -190,7 +190,7 @@ Partial Class Login
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Login"
         Me.Text = "Login"
         Me.Panel2.ResumeLayout(False)
@@ -202,13 +202,13 @@ Partial Class Login
     Friend WithEvents Label10 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtPassword As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents btnLogin As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtEmail As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label1 As Label
 End Class

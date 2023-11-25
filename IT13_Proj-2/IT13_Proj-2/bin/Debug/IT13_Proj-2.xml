@@ -72,6 +72,11 @@ IT13_Proj-2
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:IT13_Proj_2.My.Resources.Resources.Frame_123__1_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:IT13_Proj_2.My.Resources.Resources.Home_filled">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -98,6 +103,16 @@ IT13_Proj-2
 </summary>
 </member>
 <member name="P:IT13_Proj_2.My.Resources.Resources.Sign_Up_Staff">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IT13_Proj_2.My.Resources.Resources.tabler_icon_users">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IT13_Proj_2.My.Resources.Resources.tabler_icon_users__1_">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
