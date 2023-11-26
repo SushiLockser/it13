@@ -1,17 +1,15 @@
 ﻿Public Class Login
-    Dim email, password As String
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        email = txtEmail.Text
-        password = txtPassword.Text
+        Dim enteredEmail As String = txtUsername.Text
+        Dim enteredPassword As String = txtPassword.Text
 
-        userAdminAccount(email, password)
+        Dim adminCredentials = mod_db.admin()
 
-        sideBar.Show()
-        Me.Hide()
-
-    End Sub
-
-    Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Console.WriteLine(Application.StartupPath)
+        If enteredEmail = adminCredentials.Item1 AndAlso enteredPassword = adminCredentials.Item2 Then
+            MessageBox.Show("Login successful. Welcome, Admin!")
+            sideBar.Show()
+        Else
+            MessageBox.Show("Invalid credentials. Please try again.")
+        End If
     End Sub
 End Class

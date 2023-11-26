@@ -31,18 +31,18 @@ Partial Class CreateAccount
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.btnAddItem = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtFirstname = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtLastName = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txtPosition = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.txtEmpSince = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -51,11 +51,12 @@ Partial Class CreateAccount
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column8})
-        Me.DataGridView1.Location = New System.Drawing.Point(13, 363)
+        Me.DataGridView1.Location = New System.Drawing.Point(10, 295)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(962, 381)
+        Me.DataGridView1.Size = New System.Drawing.Size(722, 310)
         Me.DataGridView1.TabIndex = 23
         '
         'Column1
@@ -92,9 +93,10 @@ Partial Class CreateAccount
         '
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.ForeColor = System.Drawing.SystemColors.ActiveBorder
-        Me.TextBox1.Location = New System.Drawing.Point(698, 317)
+        Me.TextBox1.Location = New System.Drawing.Point(524, 258)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(277, 30)
+        Me.TextBox1.Size = New System.Drawing.Size(209, 26)
         Me.TextBox1.TabIndex = 24
         Me.TextBox1.Text = "Search Staff"
         '
@@ -102,13 +104,14 @@ Partial Class CreateAccount
         '
         Me.btnAddItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(120, Byte), Integer))
         Me.btnAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnAddItem.Font = New System.Drawing.Font("Helvetica", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddItem.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAddItem.ForeColor = System.Drawing.Color.White
         Me.btnAddItem.Image = Global.IT13_Proj_2.My.Resources.Resources.Add_box__1_
         Me.btnAddItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAddItem.Location = New System.Drawing.Point(13, 317)
+        Me.btnAddItem.Location = New System.Drawing.Point(10, 258)
+        Me.btnAddItem.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnAddItem.Name = "btnAddItem"
-        Me.btnAddItem.Size = New System.Drawing.Size(187, 30)
+        Me.btnAddItem.Size = New System.Drawing.Size(140, 24)
         Me.btnAddItem.TabIndex = 26
         Me.btnAddItem.Text = "Create Account"
         Me.btnAddItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -119,154 +122,168 @@ Partial Class CreateAccount
         Me.Button1.BackColor = System.Drawing.Color.Firebrick
         Me.Button1.BackgroundImage = Global.IT13_Proj_2.My.Resources.Resources.Frame_123__1_
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Button1.Location = New System.Drawing.Point(925, 53)
+        Me.Button1.Location = New System.Drawing.Point(694, 43)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(50, 44)
+        Me.Button1.Size = New System.Drawing.Size(38, 36)
         Me.Button1.TabIndex = 27
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btnSave
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(120, Byte), Integer))
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Font = New System.Drawing.Font("Helvetica", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(771, 58)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(148, 39)
-        Me.Button2.TabIndex = 28
-        Me.Button2.Text = "Save Changes"
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnSave.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSave.ForeColor = System.Drawing.Color.White
+        Me.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSave.Location = New System.Drawing.Point(578, 47)
+        Me.btnSave.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(111, 32)
+        Me.btnSave.TabIndex = 28
+        Me.btnSave.Text = "Save Changes"
+        Me.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSave.UseVisualStyleBackColor = False
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Helvetica", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(12, 9)
+        Me.Label2.Font = New System.Drawing.Font("Arial", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(9, 7)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(231, 40)
+        Me.Label2.Size = New System.Drawing.Size(190, 32)
         Me.Label2.TabIndex = 30
         Me.Label2.Text = "Staff Account"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Helvetica", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(20, 115)
+        Me.Label1.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(15, 93)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(98, 21)
+        Me.Label1.Size = New System.Drawing.Size(80, 17)
         Me.Label1.TabIndex = 47
         Me.Label1.Text = "First Name"
         '
-        'TextBox2
+        'txtFirstname
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Helvetica", 10.0!)
-        Me.TextBox2.Location = New System.Drawing.Point(19, 139)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(253, 27)
-        Me.TextBox2.TabIndex = 46
-        Me.TextBox2.Text = "25"
+        Me.txtFirstname.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.txtFirstname.Location = New System.Drawing.Point(14, 113)
+        Me.txtFirstname.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtFirstname.Name = "txtFirstname"
+        Me.txtFirstname.Size = New System.Drawing.Size(191, 23)
+        Me.txtFirstname.TabIndex = 46
+        Me.txtFirstname.Text = "25"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Helvetica", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(328, 115)
+        Me.Label3.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(246, 93)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(97, 21)
+        Me.Label3.Size = New System.Drawing.Size(79, 17)
         Me.Label3.TabIndex = 49
         Me.Label3.Text = "Last Name"
         '
-        'TextBox3
+        'txtLastName
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Helvetica", 10.0!)
-        Me.TextBox3.Location = New System.Drawing.Point(327, 139)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(253, 27)
-        Me.TextBox3.TabIndex = 48
-        Me.TextBox3.Text = "25"
+        Me.txtLastName.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.txtLastName.Location = New System.Drawing.Point(245, 113)
+        Me.txtLastName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtLastName.Name = "txtLastName"
+        Me.txtLastName.Size = New System.Drawing.Size(191, 23)
+        Me.txtLastName.TabIndex = 48
+        Me.txtLastName.Text = "25"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Helvetica", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(618, 115)
+        Me.Label4.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(464, 93)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(89, 21)
+        Me.Label4.Size = New System.Drawing.Size(74, 17)
         Me.Label4.TabIndex = 51
         Me.Label4.Text = "Password"
         '
-        'TextBox4
+        'txtPassword
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Helvetica", 10.0!)
-        Me.TextBox4.Location = New System.Drawing.Point(617, 139)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(253, 27)
-        Me.TextBox4.TabIndex = 50
-        Me.TextBox4.Text = "25"
+        Me.txtPassword.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.txtPassword.Location = New System.Drawing.Point(463, 113)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.Size = New System.Drawing.Size(191, 23)
+        Me.txtPassword.TabIndex = 50
+        Me.txtPassword.Text = "25"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Helvetica", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(20, 212)
+        Me.Label5.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(15, 172)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(74, 21)
+        Me.Label5.Size = New System.Drawing.Size(60, 17)
         Me.Label5.TabIndex = 53
         Me.Label5.Text = "Position"
         '
-        'TextBox5
+        'txtPosition
         '
-        Me.TextBox5.Font = New System.Drawing.Font("Helvetica", 10.0!)
-        Me.TextBox5.Location = New System.Drawing.Point(19, 236)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(253, 27)
-        Me.TextBox5.TabIndex = 52
-        Me.TextBox5.Text = "25"
+        Me.txtPosition.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.txtPosition.Location = New System.Drawing.Point(14, 192)
+        Me.txtPosition.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtPosition.Name = "txtPosition"
+        Me.txtPosition.Size = New System.Drawing.Size(191, 23)
+        Me.txtPosition.TabIndex = 52
+        Me.txtPosition.Text = "25"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Helvetica", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(333, 212)
+        Me.Label6.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(250, 172)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(140, 21)
+        Me.Label6.Size = New System.Drawing.Size(114, 17)
         Me.Label6.TabIndex = 55
         Me.Label6.Text = "Employed Since"
         '
-        'TextBox6
+        'txtEmpSince
         '
-        Me.TextBox6.Font = New System.Drawing.Font("Helvetica", 10.0!)
-        Me.TextBox6.Location = New System.Drawing.Point(332, 236)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(253, 27)
-        Me.TextBox6.TabIndex = 54
-        Me.TextBox6.Text = "25"
+        Me.txtEmpSince.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.txtEmpSince.Location = New System.Drawing.Point(249, 192)
+        Me.txtEmpSince.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtEmpSince.Name = "txtEmpSince"
+        Me.txtEmpSince.Size = New System.Drawing.Size(191, 23)
+        Me.txtEmpSince.TabIndex = 54
+        Me.txtEmpSince.Text = "25"
         '
         'CreateAccount
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(987, 756)
+        Me.ClientSize = New System.Drawing.Size(740, 614)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.txtEmpSince)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.txtPosition)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.txtLastName)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txtFirstname)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnAddItem)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.DataGridView1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "CreateAccount"
         Me.Text = "CreateAccount"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -284,16 +301,16 @@ Partial Class CreateAccount
     Friend WithEvents btnAddItem As Button
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnSave As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtFirstname As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtLastName As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtPassword As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txtPosition As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents txtEmpSince As TextBox
 End Class

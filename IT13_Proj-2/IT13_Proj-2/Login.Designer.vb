@@ -30,7 +30,7 @@ Partial Class Login
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnLogin = New System.Windows.Forms.Button()
-        Me.txtEmail = New System.Windows.Forms.TextBox()
+        Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -68,7 +68,7 @@ Partial Class Login
         Me.Panel2.Controls.Add(Me.txtPassword)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.btnLogin)
-        Me.Panel2.Controls.Add(Me.txtEmail)
+        Me.Panel2.Controls.Add(Me.txtUsername)
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.Label3)
@@ -124,14 +124,14 @@ Partial Class Login
         Me.btnLogin.Text = "Login"
         Me.btnLogin.UseVisualStyleBackColor = False
         '
-        'txtEmail
+        'txtUsername
         '
-        Me.txtEmail.Font = New System.Drawing.Font("Arial", 10.0!)
-        Me.txtEmail.Location = New System.Drawing.Point(30, 150)
-        Me.txtEmail.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(229, 23)
-        Me.txtEmail.TabIndex = 3
+        Me.txtUsername.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.txtUsername.Location = New System.Drawing.Point(30, 150)
+        Me.txtUsername.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.Size = New System.Drawing.Size(229, 23)
+        Me.txtUsername.TabIndex = 3
         '
         'Label5
         '
@@ -140,9 +140,9 @@ Partial Class Login
         Me.Label5.Location = New System.Drawing.Point(30, 132)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(41, 16)
+        Me.Label5.Size = New System.Drawing.Size(71, 16)
         Me.Label5.TabIndex = 2
-        Me.Label5.Text = "Email"
+        Me.Label5.Text = "Username"
         '
         'Label4
         '
@@ -208,7 +208,7 @@ Partial Class Login
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents txtEmail As TextBox
+    Friend WithEvents txtUsername As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label1 As Label
 End Class
