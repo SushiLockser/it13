@@ -52,7 +52,7 @@ Partial Class CreateAccount
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column8})
         Me.DataGridView1.Location = New System.Drawing.Point(10, 295)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
@@ -94,7 +94,7 @@ Partial Class CreateAccount
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.ForeColor = System.Drawing.SystemColors.ActiveBorder
         Me.TextBox1.Location = New System.Drawing.Point(524, 258)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(209, 26)
         Me.TextBox1.TabIndex = 24
@@ -109,7 +109,7 @@ Partial Class CreateAccount
         Me.btnAddItem.Image = Global.IT13_Proj_2.My.Resources.Resources.Add_box__1_
         Me.btnAddItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnAddItem.Location = New System.Drawing.Point(10, 258)
-        Me.btnAddItem.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnAddItem.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAddItem.Name = "btnAddItem"
         Me.btnAddItem.Size = New System.Drawing.Size(140, 24)
         Me.btnAddItem.TabIndex = 26
@@ -123,7 +123,7 @@ Partial Class CreateAccount
         Me.Button1.BackgroundImage = Global.IT13_Proj_2.My.Resources.Resources.Frame_123__1_
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button1.Location = New System.Drawing.Point(694, 43)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(38, 36)
         Me.Button1.TabIndex = 27
@@ -137,7 +137,7 @@ Partial Class CreateAccount
         Me.btnSave.ForeColor = System.Drawing.Color.White
         Me.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnSave.Location = New System.Drawing.Point(578, 47)
-        Me.btnSave.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnSave.Margin = New System.Windows.Forms.Padding(2)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(111, 32)
         Me.btnSave.TabIndex = 28
@@ -171,7 +171,7 @@ Partial Class CreateAccount
         '
         Me.txtFirstname.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.txtFirstname.Location = New System.Drawing.Point(14, 113)
-        Me.txtFirstname.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtFirstname.Margin = New System.Windows.Forms.Padding(2)
         Me.txtFirstname.Name = "txtFirstname"
         Me.txtFirstname.Size = New System.Drawing.Size(191, 23)
         Me.txtFirstname.TabIndex = 46
@@ -192,7 +192,7 @@ Partial Class CreateAccount
         '
         Me.txtLastName.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.txtLastName.Location = New System.Drawing.Point(245, 113)
-        Me.txtLastName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtLastName.Margin = New System.Windows.Forms.Padding(2)
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.Size = New System.Drawing.Size(191, 23)
         Me.txtLastName.TabIndex = 48
@@ -213,7 +213,7 @@ Partial Class CreateAccount
         '
         Me.txtPassword.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.txtPassword.Location = New System.Drawing.Point(463, 113)
-        Me.txtPassword.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(191, 23)
         Me.txtPassword.TabIndex = 50
@@ -234,7 +234,7 @@ Partial Class CreateAccount
         '
         Me.txtPosition.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.txtPosition.Location = New System.Drawing.Point(14, 192)
-        Me.txtPosition.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtPosition.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPosition.Name = "txtPosition"
         Me.txtPosition.Size = New System.Drawing.Size(191, 23)
         Me.txtPosition.TabIndex = 52
@@ -255,7 +255,7 @@ Partial Class CreateAccount
         '
         Me.txtEmpSince.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.txtEmpSince.Location = New System.Drawing.Point(249, 192)
-        Me.txtEmpSince.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtEmpSince.Margin = New System.Windows.Forms.Padding(2)
         Me.txtEmpSince.Name = "txtEmpSince"
         Me.txtEmpSince.Size = New System.Drawing.Size(191, 23)
         Me.txtEmpSince.TabIndex = 54
@@ -283,7 +283,7 @@ Partial Class CreateAccount
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.DataGridView1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "CreateAccount"
         Me.Text = "CreateAccount"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

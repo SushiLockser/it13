@@ -1,19 +1,25 @@
 ﻿Public Class CreateAccount
-    Dim firstname, lastname, position, emp_since, password As String
+    Dim Firstname, Lastname, position, Password, email As String
+    Dim Emp_since, idNum As Integer
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-
-        firstname = txtFirstname.Text
-        lastname = txtLastName.Text
+    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        Firstname = txtFirstname.Text
+        Lastname = txtLastName.Text
         position = txtPosition.Text
-        emp_since = txtEmpSince.Text
-        password = txtPassword.Text
+        Password = txtPassword.Text
 
-
-
+        If Integer.TryParse(txtEmpSince.Text, Emp_since) Then
+            If Firstname = "" Or Lastname = "" Or position = "" Or Password = "" Then
+                MsgBox("ERROR!!")
+            Else
+                idNum = GetLastInsertedIdFromDatabase()
+                Dim idNumAsString As String = idNum.ToString()
+                email = GenerateEmail(Firstname, Lastname, idNumAsString)
+                CreateAccountStaff(Firstname, Lastname, position, Emp_since, Password, idNum)
+                MsgBox("Generated Email: " & email)
+            End If
+        Else
+            MsgBox("Please enter a valid number for year of employment.")
+        End If
     End Sub
 End Class

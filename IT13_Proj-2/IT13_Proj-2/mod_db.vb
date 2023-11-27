@@ -1,16 +1,18 @@
 ﻿Imports System.Data.SQLite
+Imports System.Net.Security
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Module mod_db
-    Dim sqliteConnection As String = "Data Source=gvalias_user.db;Version=3;"
+    Dim connectionString As String = "Data Source= " & Application.StartupPath & "\gvalias_user.db; Intergrated Security=true"
+    Dim connection As SQLiteConnection
 
-    Sub AdminAccount()
+    Public Sub AdminAccount(ByVal admin_username As String, ByVal admin_password As String)
         Try
-            Using connection As New SQLiteConnection(sqliteConnection)
+            Using connection As New SQLiteConnection(connectionString)
                 connection.Open()
-                Dim query As String = "INSERT INTO user_admin (username, password) VALUES (@userNameAdmin, @passwordAdmin);"
-                Using command As New SQLiteCommand(query, connection)
-                    command.Parameters.AddWithValue("@emailAdmin", "Admin")
-                    command.Parameters.AddWithValue("@passwordAdmin", "adminpassword")
+                Using command As New SQLiteCommand("INSERT INTO user_admin (username, password) VALUES (@userNameAdmin, @passwordAdmin);", connection)
+                    command.Parameters.AddWithValue("@emailAdmin", admin_username)
+                    command.Parameters.AddWithValue("@passwordAdmin", admin_password)
                     command.ExecuteNonQuery()
                     Console.WriteLine("Admin account created successfully.")
                 End Using
@@ -20,9 +22,9 @@ Module mod_db
         End Try
     End Sub
 
-    Function admin() As Tuple(Of String, String)
+    Public Function admin() As Tuple(Of String, String)
         Try
-            Using connection As New SQLiteConnection(sqliteConnection)
+            Using connection As New SQLiteConnection(connectionString)
                 connection.Open()
 
                 Dim query As String = "SELECT username, password FROM user_admin LIMIT 1;"
@@ -40,4 +42,57 @@ Module mod_db
 
         Return Tuple.Create("", "")
     End Function
+
+    Public Sub CreateAccountStaff(ByVal firstname As String, ByVal Lastname As String, ByVal position As String, ByVal Emp_since As Integer, ByVal Password As String, ByVal idNum As Integer)
+
+        Try
+            Using connection As New SQLiteConnection(connectionString)
+                connection.Open()
+                Using command As New SQLiteCommand("INSERT INTO user_staff (firstname, lastname, position, emp_since, password, email) VALUES (@FirstName, @Lastname, @Position, @Emp_since, @Password, @Email);", connection)
+                    Dim emailDomain As String = "@gvalias.com"
+                    Dim concatenatedEmail As String = $"{firstname.ToLower().Substring(0, 1)}.{Lastname.ToLower()}.{idNum}{emailDomain}"
+                    command.Parameters.AddWithValue("@FirstName", firstname)
+                    command.Parameters.AddWithValue("@Lastname", Lastname)
+                    command.Parameters.AddWithValue("@Position", position)
+                    command.Parameters.AddWithValue("@Emp_since", Emp_since)
+                    command.Parameters.AddWithValue("@Password", Password)
+                    command.Parameters.AddWithValue("@Email", concatenatedEmail)
+                    command.ExecuteNonQuery()
+                End Using
+            End Using
+        Catch ex As SQLiteException
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
+
+    End Sub
+
+    Public Function GenerateEmail(ByVal firstname As String, ByVal lastname As String, ByVal idNum As Integer) As String
+
+        Dim emailDomain As String = "@gvalias.com"
+        Dim generatedEmail As String = $"{firstname.ToLower().Substring(0, 1)}.{lastname.ToLower()}.{idNum}{emailDomain}"
+        Return generatedEmail
+
+    End Function
+
+    Public Function GetLastInsertedIdFromDatabase() As Integer
+        Dim lastInsertedId As Integer = -1
+
+        Try
+            Using connection As New SQLiteConnection(connectionString)
+                connection.Open()
+                Using command As New SQLiteCommand("SELECT COALESCE(MAX(idNum), 0) + 1 FROM user_staff;", connection)
+                    Dim result As Object = command.ExecuteScalar()
+                    If result IsNot Nothing AndAlso Integer.TryParse(result.ToString(), lastInsertedId) Then
+                        Return lastInsertedId
+                    End If
+                End Using
+            End Using
+        Catch ex As SQLiteException
+            MessageBox.Show("Error fetching last inserted ID: " & ex.Message)
+        End Try
+
+        Return lastInsertedId
+    End Function
+
+
 End Module
