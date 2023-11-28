@@ -1,5 +1,6 @@
 ﻿Imports System.Data.SQLite
 Imports System.Net.Security
+Imports System.Security.Cryptography
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Module mod_db
@@ -74,6 +75,12 @@ Module mod_db
 
     End Function
 
+    Public Function GeneratePassword(ByVal password As String)
+
+        Dim generatedpassword As String = $"{password.ToLower()}"
+        Return generatedpassword
+    End Function
+
     Public Function GetLastInsertedIdFromDatabase() As Integer
         Dim lastInsertedId As Integer = -1
 
@@ -92,6 +99,28 @@ Module mod_db
         End Try
 
         Return lastInsertedId
+    End Function
+
+    Public Function staffAccountLogin(ByVal email As String, ByVal password As String) As Boolean
+        Try
+            Using connection As New SQLiteConnection(connectionString)
+                connection.Open()
+                Using command As New SQLiteCommand("SELECT COUNT(*) From user_staff WHERE email = @Email And password = @Password);", connection)
+                    command.Parameters.AddWithValue("@Email", email)
+                    command.Parameters.AddWithValue("@Password", password)
+
+                    Dim count As Integer = Convert.ToInt32(command.ExecuteScalar())
+
+                    If count > 0 Then
+                        Return True
+                    Else
+                        Return False
+                    End If
+                End Using
+            End Using
+        Catch ex As Exception
+
+        End Try
     End Function
 
 

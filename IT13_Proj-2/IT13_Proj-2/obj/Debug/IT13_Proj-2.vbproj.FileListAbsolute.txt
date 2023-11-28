@@ -73,7 +73,6 @@ C:\Users\User\source\repos\it13_repo\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13
 C:\Users\User\source\repos\it13_repo\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj_2.EconomicPage.resources
 C:\Users\User\source\repos\it13_repo\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj_2.EditProductPage.resources
 C:\Users\User\source\repos\it13_repo\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj_2.Login.resources
-C:\Users\User\source\repos\it13_repo\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj_2.SignUpPage.resources
 C:\Users\User\source\repos\it13_repo\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj_2.sideBar.resources
 C:\Users\User\source\repos\it13_repo\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj_2.projectPage.resources
 C:\Users\User\source\repos\it13_repo\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj_2.ProductPage.resources
@@ -93,3 +92,8 @@ C:\Users\Lerog\Source\Repos\SushiLockser\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\
 C:\Users\Lerog\Source\Repos\SushiLockser\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj_2.Profile.resources
 C:\Users\Lerog\Source\Repos\SushiLockser\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj_2.ViewEconomicPage.resources
 C:\Users\Lerog\Source\Repos\SushiLockser\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj_2.ViewProject.resources
+C:\Users\User\source\repos\it13_repo\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj_2.AddProduct.resources
+C:\Users\User\source\repos\it13_repo\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj_2.AddProject.resources
+C:\Users\User\source\repos\it13_repo\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj_2.Profile.resources
+C:\Users\User\source\repos\it13_repo\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj_2.ViewEconomicPage.resources
+C:\Users\User\source\repos\it13_repo\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj_2.ViewProject.resources
