@@ -13,15 +13,11 @@
             If Firstname = "" Or Lastname = "" Or position = "" Or Password = "" Then
                 MsgBox("ERROR!!")
             Else
-                idNum = GetLastInsertedIdFromDatabase()
-                Dim idNumAsString As String = idNum.ToString()
-                email = GenerateEmail(Firstname, Lastname, idNumAsString)
-                genPass = GeneratePassword(Password)
-                CreateAccountStaff(Firstname, Lastname, position, Emp_since, Password, idNum)
-                MessageBox.Show("Email: " & email & vbNewLine & "Password: " & genPass, "GENERATED ACCOUNT", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                CreateAccountStaff(Firstname, Lastname, position, Emp_since, Password)
             End If
         Else
             MsgBox("Please enter a valid number for year of employment.")
         End If
     End Sub
+
 End Class

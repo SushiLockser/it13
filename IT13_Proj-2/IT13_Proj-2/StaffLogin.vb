@@ -4,6 +4,7 @@
         email = txtEmail.Text
         password = txtPassword.Text
 
+
         If email = "" And password = "" Then
             MessageBox.Show("INPUT ACCOUNT", "LOGIN MESSAGE", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else

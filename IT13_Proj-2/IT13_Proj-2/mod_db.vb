@@ -47,13 +47,14 @@ Module mod_db
     End Function
 
     'ADMIN PART TO CREATE AN ACCOUNT FOR STAFF
-    Public Sub CreateAccountStaff(ByVal firstname As String, ByVal Lastname As String, ByVal position As String, ByVal Emp_since As Integer, ByVal Password As String, ByVal idNum As Integer)
+    Public Sub CreateAccountStaff(ByVal firstname As String, ByVal Lastname As String, ByVal position As String, ByVal Emp_since As Integer, ByVal Password As String)
 
         Try
             Using connection As New SQLiteConnection(connectionString)
                 connection.Open()
                 Using command As New SQLiteCommand("INSERT INTO user_staff (firstname, lastname, position, emp_since, password, email) VALUES (@FirstName, @Lastname, @Position, @Emp_since, @Password, @Email);", connection)
                     Dim emailDomain As String = "@gvalias.com"
+                    Dim idNum As Integer = GetLastValidIdFromDatabase()
                     Dim concatenatedEmail As String = $"{firstname.ToLower().Substring(0, 1)}.{Lastname.ToLower()}.{idNum}{emailDomain}"
                     command.Parameters.AddWithValue("@FirstName", firstname)
                     command.Parameters.AddWithValue("@Lastname", Lastname)
@@ -62,6 +63,8 @@ Module mod_db
                     command.Parameters.AddWithValue("@Password", Password)
                     command.Parameters.AddWithValue("@Email", concatenatedEmail)
                     command.ExecuteNonQuery()
+                    MessageBox.Show("Email: " & concatenatedEmail & vbNewLine & "Password: " & Password, "GENERATED ACCOUNT", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
                 End Using
             End Using
         Catch ex As SQLiteException
@@ -87,25 +90,27 @@ Module mod_db
     End Function
 
     'INDUM
-    Public Function GetLastInsertedIdFromDatabase() As Integer
-        Dim lastInsertedId As Integer = -1
+    Public Function GetLastValidIdFromDatabase() As Integer
+        Dim lastValidId As Integer = +1
 
         Try
             Using connection As New SQLiteConnection(connectionString)
                 connection.Open()
-                Using command As New SQLiteCommand("SELECT COALESCE(MAX(idNum), 0) + 1 FROM user_staff;", connection)
+                Using command As New SQLiteCommand("SELECT COALESCE(MAX(idNum), 0) +1 FROM user_staff;", connection)
                     Dim result As Object = command.ExecuteScalar()
-                    If result IsNot Nothing AndAlso Integer.TryParse(result.ToString(), lastInsertedId) Then
-                        Return lastInsertedId
+                    If result IsNot Nothing AndAlso Integer.TryParse(result.ToString(), lastValidId) Then
+                        Return lastValidId
                     End If
                 End Using
             End Using
         Catch ex As SQLiteException
-            MessageBox.Show("Error fetching last inserted ID: " & ex.Message)
+            MessageBox.Show("Error fetching last valid ID: " & ex.Message)
         End Try
 
-        Return lastInsertedId
+        Return lastValidId
     End Function
+
+
 
     'LOGIN ACCOUNT FOR STAFF
     Public Function staffAccountLogin(ByVal email As String, ByVal password As String) As Boolean
