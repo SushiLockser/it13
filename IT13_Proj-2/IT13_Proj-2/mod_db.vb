@@ -7,6 +7,7 @@ Module mod_db
     Dim connectionString As String = "Data Source= " & Application.StartupPath & "\gvalias_user.db; Intergrated Security=true"
     Dim connection As SQLiteConnection
 
+    'ADMIN LOGIN ACCOUNT
     Public Sub AdminAccount(ByVal admin_username As String, ByVal admin_password As String)
         Try
             Using connection As New SQLiteConnection(connectionString)
@@ -23,6 +24,7 @@ Module mod_db
         End Try
     End Sub
 
+    'ADMIN TO FETCH THE DATA FROM THE DATABASE
     Public Function admin() As Tuple(Of String, String)
         Try
             Using connection As New SQLiteConnection(connectionString)
@@ -44,6 +46,7 @@ Module mod_db
         Return Tuple.Create("", "")
     End Function
 
+    'ADMIN PART TO CREATE AN ACCOUNT FOR STAFF
     Public Sub CreateAccountStaff(ByVal firstname As String, ByVal Lastname As String, ByVal position As String, ByVal Emp_since As Integer, ByVal Password As String, ByVal idNum As Integer)
 
         Try
@@ -67,6 +70,7 @@ Module mod_db
 
     End Sub
 
+    'CONCAT EMAIL ACCOUNT FOR STAFF
     Public Function GenerateEmail(ByVal firstname As String, ByVal lastname As String, ByVal idNum As Integer) As String
 
         Dim emailDomain As String = "@gvalias.com"
@@ -75,12 +79,14 @@ Module mod_db
 
     End Function
 
+    'GENERATED PASSWORD
     Public Function GeneratePassword(ByVal password As String)
 
         Dim generatedpassword As String = $"{password.ToLower()}"
         Return generatedpassword
     End Function
 
+    'INDUM
     Public Function GetLastInsertedIdFromDatabase() As Integer
         Dim lastInsertedId As Integer = -1
 
@@ -101,6 +107,7 @@ Module mod_db
         Return lastInsertedId
     End Function
 
+    'LOGIN ACCOUNT FOR STAFF
     Public Function staffAccountLogin(ByVal email As String, ByVal password As String) As Boolean
         Try
             Using connection As New SQLiteConnection(connectionString)

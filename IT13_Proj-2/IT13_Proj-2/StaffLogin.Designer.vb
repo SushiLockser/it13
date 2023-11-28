@@ -61,6 +61,7 @@ Partial Class StaffLogin
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(304, 27)
         Me.txtPassword.TabIndex = 12
+        Me.txtPassword.UseSystemPasswordChar = True
         '
         'Label2
         '
