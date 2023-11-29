@@ -4,12 +4,15 @@
         Dim email As String = txtEmail.Text
         Dim pass As String = txtPassword.Text
 
-
-        If email = staffAccountLogin.Item1 And pass = staffAccountLogin.Item2 Then
-            MessageBox.Show("Login successful. Welcome, Admin!")
-            StaffSideBar.Show()
+        If email = "" Or pass = "" Then
+            MessageBox.Show("Please enter both email and password.", "LOGIN UNSUCCESSFUL", MessageBoxButtons.RetryCancel)
         Else
-            MessageBox.Show("Invalid credentials. Please try again.")
+            If staffLoginFunction(email, pass) Then
+                MessageBox.Show("Welcome!", "LOGIN SUCCESSFULLY", MessageBoxButtons.OK)
+                StaffSideBar.Show()
+            Else
+                MessageBox.Show("Incorrect email or password.", "LOGIN UNSUCCESSFUL", MessageBoxButtons.RetryCancel)
+            End If
         End If
     End Sub
 

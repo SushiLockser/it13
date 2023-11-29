@@ -1,15 +1,21 @@
 ﻿Public Class Login
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        Dim enteredEmail As String = txtUsername.Text
-        Dim enteredPassword As String = txtPassword.Text
+        Dim username As String = txtUsername.Text
+        Dim pass As String = txtPassword.Text
 
-        Dim adminCredentials = mod_db.admin()
-
-        If enteredEmail = adminCredentials.Item1 AndAlso enteredPassword = adminCredentials.Item2 Then
-            MessageBox.Show("Login successful. Welcome, Admin!")
-            sideBar.Show()
+        If username = "" Or pass = "" Then
+            MessageBox.Show("Please enter both email and password.", "LOGIN UNSUCCESSFUL", MessageBoxButtons.RetryCancel)
+            txtUsername.Clear()
+            txtPassword.Clear()
         Else
-            MessageBox.Show("Invalid credentials. Please try again.")
+            If adminLoginFunction(username, pass) Then
+                MessageBox.Show("Welcome! Admin@", "LOGIN SUCCESSFULLY", MessageBoxButtons.OK)
+                StaffSideBar.Show()
+            Else
+                MessageBox.Show("Incorrect email or password.", "LOGIN UNSUCCESSFUL", MessageBoxButtons.RetryCancel)
+                txtUsername.Clear()
+                txtPassword.Clear()
+            End If
         End If
     End Sub
 End Class

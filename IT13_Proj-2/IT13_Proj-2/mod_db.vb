@@ -25,25 +25,23 @@ Module mod_db
     End Sub
 
     'ADMIN TO FETCH THE DATA FROM THE DATABASE
-    Public Function admin() As Tuple(Of String, String)
-        Try
-            Using connection As New SQLiteConnection(connectionString)
-                connection.Open()
+    Public Function adminLoginFunction(username As String, password As String) As Boolean
+        Using connection As New SQLiteConnection(connectionString)
+            connection.Open()
+            Using command As New SQLiteCommand("SELECT COUNT(*) FROM user_admin WHERE username = @Username AND password = @Password;", connection)
+                command.Parameters.AddWithValue("@Username", username)
+                command.Parameters.AddWithValue("@Password", password)
 
-                Dim query As String = "SELECT username, password FROM user_admin LIMIT 1;"
-                Using command As New SQLiteCommand(query, connection)
-                    Using reader As SQLiteDataReader = command.ExecuteReader()
-                        If reader.Read() Then
-                            Return Tuple.Create(reader("username").ToString(), reader("password").ToString())
-                        End If
-                    End Using
-                End Using
+                Dim count As Integer = Convert.ToInt32(command.ExecuteScalar())
+
+                If count > 0 Then
+                    Return True
+                Else
+                    Return False
+                End If
             End Using
-        Catch ex As SQLiteException
-            Console.WriteLine("Error: " & ex.Message)
-        End Try
 
-        Return Tuple.Create("", "")
+        End Using
     End Function
 
     'ADMIN PART TO CREATE AN ACCOUNT FOR STAFF
@@ -91,7 +89,7 @@ Module mod_db
         Return generatedpassword
     End Function
 
-    'INDUM
+    'IDNUM
     Public Function GetLastValidIdFromDatabase() As Integer
         Dim lastValidId As Integer = -1
 
@@ -114,27 +112,23 @@ Module mod_db
 
 
     'LOGIN ACCOUNT FOR STAFF
-    Public Function staffAccountLogin() As Tuple(Of String, String)
-        Try
-            Using connection As New SQLiteConnection(connectionString)
-                connection.Open()
+    Public Function staffLoginFunction(email As String, password As String) As Boolean
+        Using connection As New SQLiteConnection(connectionString)
+            connection.Open()
+            Using command As New SQLiteCommand("SELECT COUNT(*) FROM user_staff WHERE email = @Email AND password = @Password;", connection)
+                command.Parameters.AddWithValue("@Email", email)
+                command.Parameters.AddWithValue("@Password", password)
 
-                Dim query As String = "SELECT email, password FROM user_staff ;"
-                Using command As New SQLiteCommand(query, connection)
-                    Using reader As SQLiteDataReader = command.ExecuteReader()
-                        If reader.Read() Then
-                            Dim email As String = reader("email").ToString()
-                            Dim password As String = reader("password").ToString()
-                            Return Tuple.Create(email, password)
-                        End If
-                    End Using
-                End Using
+                Dim count As Integer = Convert.ToInt32(command.ExecuteScalar())
+
+                If count > 0 Then
+                    Return True
+                Else
+                    Return False
+                End If
             End Using
-        Catch ex As SQLiteException
-            Console.WriteLine("Error: " & ex.Message)
-        End Try
 
-        Return Tuple.Create("", "")
+        End Using
     End Function
 
 
