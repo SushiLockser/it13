@@ -1,5 +1,9 @@
 ﻿Public Class CreateAccount
-    Dim Firstname, Lastname, position, Password, email, genPass As String
+    Dim Firstname, Lastname, position, Password, email, Status As String
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
 
     Dim Emp_since, idNum As Integer
 
@@ -8,12 +12,13 @@
         Lastname = txtLastName.Text
         position = txtPosition.Text
         Password = txtPassword.Text
+        Status = txtStatus.Text
 
         If Integer.TryParse(txtEmpSince.Text, Emp_since) Then
             If Firstname = "" Or Lastname = "" Or position = "" Or Password = "" Then
                 MsgBox("ERROR!!")
             Else
-                CreateAccountStaff(Firstname, Lastname, position, Emp_since, Password)
+                CreateAccountStaff(Firstname, Lastname, position, Emp_since, Password, Status)
             End If
         Else
             MsgBox("Please enter a valid number for year of employment.")

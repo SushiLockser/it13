@@ -1,16 +1,16 @@
 ﻿Public Class StaffLogin
-    Dim email, password As String
+
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        email = txtEmail.Text
-        password = txtPassword.Text
+        Dim email As String = txtEmail.Text
+        Dim pass As String = txtPassword.Text
 
 
-        If email = "" And password = "" Then
-            MessageBox.Show("INPUT ACCOUNT", "LOGIN MESSAGE", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        Else
-            staffAccountLogin(email, password)
-            MessageBox.Show("PAYNALEE")
+        If email = staffAccountLogin.Item1 And pass = staffAccountLogin.Item2 Then
+            MessageBox.Show("Login successful. Welcome, Admin!")
             StaffSideBar.Show()
+        Else
+            MessageBox.Show("Invalid credentials. Please try again.")
         End If
     End Sub
+
 End Class

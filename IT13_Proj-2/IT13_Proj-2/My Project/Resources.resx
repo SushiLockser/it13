@@ -139,6 +139,9 @@
   <data name="Add box (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add box (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="tabler-icon-users (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tabler-icon-users (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Insert chart outlined" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Insert chart outlined.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -178,7 +181,7 @@
   <data name="Add box" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add box.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tabler-icon-users (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tabler-icon-users (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="9349901" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\9349901.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

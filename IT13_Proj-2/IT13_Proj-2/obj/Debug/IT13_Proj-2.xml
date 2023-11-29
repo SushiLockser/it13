@@ -22,6 +22,11 @@ IT13_Proj-2
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:IT13_Proj_2.My.Resources.Resources._9349901">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:IT13_Proj_2.My.Resources.Resources.Account_circle">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

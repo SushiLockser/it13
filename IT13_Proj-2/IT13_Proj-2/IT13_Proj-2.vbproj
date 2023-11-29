@@ -350,6 +350,9 @@
   <ItemGroup>
     <None Include="Resources\tabler-icon-users %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9349901.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

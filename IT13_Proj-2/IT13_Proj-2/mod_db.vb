@@ -47,12 +47,12 @@ Module mod_db
     End Function
 
     'ADMIN PART TO CREATE AN ACCOUNT FOR STAFF
-    Public Sub CreateAccountStaff(ByVal firstname As String, ByVal Lastname As String, ByVal position As String, ByVal Emp_since As Integer, ByVal Password As String)
+    Public Sub CreateAccountStaff(ByVal firstname As String, ByVal Lastname As String, ByVal position As String, ByVal Emp_since As Integer, ByVal Password As String, ByVal status As String)
 
         Try
             Using connection As New SQLiteConnection(connectionString)
                 connection.Open()
-                Using command As New SQLiteCommand("INSERT INTO user_staff (firstname, lastname, position, emp_since, password, email) VALUES (@FirstName, @Lastname, @Position, @Emp_since, @Password, @Email);", connection)
+                Using command As New SQLiteCommand("INSERT INTO user_staff (firstname, lastname, position, emp_since, password, email, status) VALUES (@FirstName, @Lastname, @Position, @Emp_since, @Password, @Email, @Status);", connection)
                     Dim emailDomain As String = "@gvalias.com"
                     Dim idNum As Integer = GetLastValidIdFromDatabase()
                     Dim concatenatedEmail As String = $"{firstname.ToLower().Substring(0, 1)}.{Lastname.ToLower()}.{idNum}{emailDomain}"
@@ -62,6 +62,7 @@ Module mod_db
                     command.Parameters.AddWithValue("@Emp_since", Emp_since)
                     command.Parameters.AddWithValue("@Password", Password)
                     command.Parameters.AddWithValue("@Email", concatenatedEmail)
+                    command.Parameters.AddWithValue("@Status", status)
                     command.ExecuteNonQuery()
                     MessageBox.Show("Email: " & concatenatedEmail & vbNewLine & "Password: " & Password, "GENERATED ACCOUNT", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
@@ -70,6 +71,7 @@ Module mod_db
         Catch ex As SQLiteException
             MessageBox.Show("Error: " & ex.Message)
         End Try
+        connection.Close()
 
     End Sub
 
@@ -91,7 +93,7 @@ Module mod_db
 
     'INDUM
     Public Function GetLastValidIdFromDatabase() As Integer
-        Dim lastValidId As Integer = +1
+        Dim lastValidId As Integer = -1
 
         Try
             Using connection As New SQLiteConnection(connectionString)
@@ -112,23 +114,27 @@ Module mod_db
 
 
     'LOGIN ACCOUNT FOR STAFF
-    Public Function staffAccountLogin(ByVal email As String, ByVal password As String) As Boolean
+    Public Function staffAccountLogin() As Tuple(Of String, String)
         Try
             Using connection As New SQLiteConnection(connectionString)
                 connection.Open()
 
-                    Dim count As Integer = Convert.ToInt32(command.ExecuteScalar())
-
-                    If count > 0 Then
-                        Return True
-                    Else
-                        Return False
-                    End If
+                Dim query As String = "SELECT email, password FROM user_staff ;"
+                Using command As New SQLiteCommand(query, connection)
+                    Using reader As SQLiteDataReader = command.ExecuteReader()
+                        If reader.Read() Then
+                            Dim email As String = reader("email").ToString()
+                            Dim password As String = reader("password").ToString()
+                            Return Tuple.Create(email, password)
+                        End If
+                    End Using
                 End Using
             End Using
-        Catch ex As Exception
-
+        Catch ex As SQLiteException
+            Console.WriteLine("Error: " & ex.Message)
         End Try
+
+        Return Tuple.Create("", "")
     End Function
 
 
