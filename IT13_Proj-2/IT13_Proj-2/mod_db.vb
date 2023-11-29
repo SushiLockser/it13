@@ -111,15 +111,11 @@ Module mod_db
     End Function
 
 
-
     'LOGIN ACCOUNT FOR STAFF
     Public Function staffAccountLogin(ByVal email As String, ByVal password As String) As Boolean
         Try
             Using connection As New SQLiteConnection(connectionString)
                 connection.Open()
-                Using command As New SQLiteCommand("SELECT COUNT(*) From user_staff WHERE email = @Email And password = @Password);", connection)
-                    command.Parameters.AddWithValue("@Email", email)
-                    command.Parameters.AddWithValue("@Password", password)
 
                     Dim count As Integer = Convert.ToInt32(command.ExecuteScalar())
 
