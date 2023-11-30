@@ -22,7 +22,6 @@ Partial Class CreateAccount
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
@@ -36,33 +35,21 @@ Partial Class CreateAccount
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtPosition = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtEmpSince = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtStatus = New System.Windows.Forms.TextBox()
+        Me.dtpEmpSince = New System.Windows.Forms.DateTimePicker()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.dgvStaff = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        CType(Me.dgvStaff, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column8, Me.Column5, Me.Column6})
-        Me.DataGridView1.Location = New System.Drawing.Point(10, 295)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(722, 310)
-        Me.DataGridView1.TabIndex = 23
         '
         'TextBox1
         '
@@ -207,15 +194,6 @@ Partial Class CreateAccount
         Me.Label6.TabIndex = 55
         Me.Label6.Text = "Employed Since"
         '
-        'txtEmpSince
-        '
-        Me.txtEmpSince.Font = New System.Drawing.Font("Arial", 10.0!)
-        Me.txtEmpSince.Location = New System.Drawing.Point(256, 232)
-        Me.txtEmpSince.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtEmpSince.Name = "txtEmpSince"
-        Me.txtEmpSince.Size = New System.Drawing.Size(191, 23)
-        Me.txtEmpSince.TabIndex = 54
-        '
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.DarkGreen
@@ -257,66 +235,84 @@ Partial Class CreateAccount
         Me.Label7.TabIndex = 58
         Me.Label7.Text = "Status"
         '
-        'txtStatus
+        'dtpEmpSince
         '
-        Me.txtStatus.Font = New System.Drawing.Font("Arial", 10.0!)
-        Me.txtStatus.Location = New System.Drawing.Point(474, 232)
-        Me.txtStatus.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtStatus.Name = "txtStatus"
-        Me.txtStatus.Size = New System.Drawing.Size(191, 23)
-        Me.txtStatus.TabIndex = 59
+        Me.dtpEmpSince.CustomFormat = "MM/dd/yyyy"
+        Me.dtpEmpSince.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpEmpSince.Location = New System.Drawing.Point(260, 234)
+        Me.dtpEmpSince.Name = "dtpEmpSince"
+        Me.dtpEmpSince.Size = New System.Drawing.Size(183, 20)
+        Me.dtpEmpSince.TabIndex = 60
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(475, 238)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(46, 16)
+        Me.Label8.TabIndex = 61
+        Me.Label8.Text = "Active"
+        '
+        'dgvStaff
+        '
+        Me.dgvStaff.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvStaff.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
+        Me.dgvStaff.Location = New System.Drawing.Point(19, 281)
+        Me.dgvStaff.Name = "dgvStaff"
+        Me.dgvStaff.RowHeadersVisible = False
+        Me.dgvStaff.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvStaff.Size = New System.Drawing.Size(704, 321)
+        Me.dgvStaff.TabIndex = 62
         '
         'Column1
         '
-        Me.Column1.HeaderText = "ID"
-        Me.Column1.MinimumWidth = 6
+        Me.Column1.HeaderText = "ID NUMBER"
         Me.Column1.Name = "Column1"
         '
         'Column2
         '
-        Me.Column2.HeaderText = "Name"
-        Me.Column2.MinimumWidth = 6
+        Me.Column2.HeaderText = "FULL NAME"
         Me.Column2.Name = "Column2"
         '
         'Column3
         '
-        Me.Column3.HeaderText = "Password"
-        Me.Column3.MinimumWidth = 6
+        Me.Column3.HeaderText = "PASSWORD"
         Me.Column3.Name = "Column3"
         '
         'Column4
         '
-        Me.Column4.HeaderText = "Position"
-        Me.Column4.MinimumWidth = 6
+        Me.Column4.HeaderText = "POSITION"
         Me.Column4.Name = "Column4"
-        '
-        'Column8
-        '
-        Me.Column8.HeaderText = "Employee since:"
-        Me.Column8.MinimumWidth = 6
-        Me.Column8.Name = "Column8"
         '
         'Column5
         '
-        Me.Column5.HeaderText = "Email"
+        Me.Column5.HeaderText = "YEAR OF EMPLOYMENT"
         Me.Column5.Name = "Column5"
         '
         'Column6
         '
-        Me.Column6.HeaderText = "Status"
+        Me.Column6.HeaderText = "EMAIL"
         Me.Column6.Name = "Column6"
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "STATUS"
+        Me.Column7.Name = "Column7"
         '
         'CreateAccount
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(740, 614)
-        Me.Controls.Add(Me.txtStatus)
+        Me.Controls.Add(Me.dgvStaff)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.dtpEmpSince)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.txtEmpSince)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txtPosition)
         Me.Controls.Add(Me.Label4)
@@ -329,18 +325,15 @@ Partial Class CreateAccount
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.DataGridView1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "CreateAccount"
         Me.Text = "CreateAccount"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvStaff, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents btnSave As Button
@@ -354,16 +347,17 @@ Partial Class CreateAccount
     Friend WithEvents Label5 As Label
     Friend WithEvents txtPosition As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents txtEmpSince As TextBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Label7 As Label
-    Friend WithEvents txtStatus As TextBox
+    Friend WithEvents dtpEmpSince As DateTimePicker
+    Friend WithEvents Label8 As Label
+    Friend WithEvents dgvStaff As DataGridView
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
 End Class

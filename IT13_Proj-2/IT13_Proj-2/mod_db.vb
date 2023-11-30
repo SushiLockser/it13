@@ -1,7 +1,4 @@
 ﻿Imports System.Data.SQLite
-Imports System.Net.Security
-Imports System.Security.Cryptography
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Module mod_db
     Dim connectionString As String = "Data Source= " & Application.StartupPath & "\gvalias_user.db; Intergrated Security=true"
@@ -45,19 +42,21 @@ Module mod_db
     End Function
 
     'ADMIN PART TO CREATE AN ACCOUNT FOR STAFF
-    Public Sub CreateAccountStaff(ByVal firstname As String, ByVal Lastname As String, ByVal position As String, ByVal Emp_since As Integer, ByVal Password As String, ByVal status As String)
+    Public Sub CreateAccountStaff(ByVal firstname As String, ByVal Lastname As String, ByVal position As String, ByVal selectedDate As String, ByVal Password As String, ByVal email As String)
 
         Try
             Using connection As New SQLiteConnection(connectionString)
                 connection.Open()
                 Using command As New SQLiteCommand("INSERT INTO user_staff (firstname, lastname, position, emp_since, password, email, status) VALUES (@FirstName, @Lastname, @Position, @Emp_since, @Password, @Email, @Status);", connection)
                     Dim emailDomain As String = "@gvalias.com"
+                    Dim status As String = "Active"
                     Dim idNum As Integer = GetLastValidIdFromDatabase()
                     Dim concatenatedEmail As String = $"{firstname.ToLower().Substring(0, 1)}.{Lastname.ToLower()}.{idNum}{emailDomain}"
+
                     command.Parameters.AddWithValue("@FirstName", firstname)
                     command.Parameters.AddWithValue("@Lastname", Lastname)
                     command.Parameters.AddWithValue("@Position", position)
-                    command.Parameters.AddWithValue("@Emp_since", Emp_since)
+                    command.Parameters.AddWithValue("@Emp_since", selectedDate)
                     command.Parameters.AddWithValue("@Password", Password)
                     command.Parameters.AddWithValue("@Email", concatenatedEmail)
                     command.Parameters.AddWithValue("@Status", status)
@@ -69,29 +68,12 @@ Module mod_db
         Catch ex As SQLiteException
             MessageBox.Show("Error: " & ex.Message)
         End Try
-        connection.Close()
 
     End Sub
 
-    'CONCAT EMAIL ACCOUNT FOR STAFF
-    Public Function GenerateEmail(ByVal firstname As String, ByVal lastname As String, ByVal idNum As Integer) As String
-
-        Dim emailDomain As String = "@gvalias.com"
-        Dim generatedEmail As String = $"{firstname.ToLower().Substring(0, 1)}.{lastname.ToLower()}.{idNum}{emailDomain}"
-        Return generatedEmail
-
-    End Function
-
-    'GENERATED PASSWORD
-    Public Function GeneratePassword(ByVal password As String)
-
-        Dim generatedpassword As String = $"{password.ToLower()}"
-        Return generatedpassword
-    End Function
-
     'IDNUM
     Public Function GetLastValidIdFromDatabase() As Integer
-        Dim lastValidId As Integer = -1
+        Dim lastValidId As Integer
 
         Try
             Using connection As New SQLiteConnection(connectionString)
@@ -109,7 +91,6 @@ Module mod_db
 
         Return lastValidId
     End Function
-
 
     'LOGIN ACCOUNT FOR STAFF
     Public Function staffLoginFunction(email As String, password As String) As Boolean
@@ -130,6 +111,7 @@ Module mod_db
 
         End Using
     End Function
+
 
 
 End Module

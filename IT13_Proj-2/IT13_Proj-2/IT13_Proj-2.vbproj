@@ -137,6 +137,7 @@
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="mod_CRUD.vb" />
     <Compile Include="mod_db.vb" />
     <Compile Include="Profile.Designer.vb">
       <DependentUpon>Profile.vb</DependentUpon>

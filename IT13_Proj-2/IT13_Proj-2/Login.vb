@@ -9,8 +9,8 @@
             txtPassword.Clear()
         Else
             If adminLoginFunction(username, pass) Then
-                MessageBox.Show("Welcome! Admin@", "LOGIN SUCCESSFULLY", MessageBoxButtons.OK)
-                StaffSideBar.Show()
+                MessageBox.Show("Welcome! Admin", "LOGIN SUCCESSFULLY", MessageBoxButtons.OK)
+                sideBar.Show()
             Else
                 MessageBox.Show("Incorrect email or password.", "LOGIN UNSUCCESSFUL", MessageBoxButtons.RetryCancel)
                 txtUsername.Clear()
@@ -18,4 +18,5 @@
             End If
         End If
     End Sub
+
 End Class
