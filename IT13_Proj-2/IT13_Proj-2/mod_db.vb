@@ -61,6 +61,8 @@ Module mod_db
                     command.Parameters.AddWithValue("@Email", concatenatedEmail)
                     command.Parameters.AddWithValue("@Status", status)
                     command.ExecuteNonQuery()
+
+
                     MessageBox.Show("Email: " & concatenatedEmail & vbNewLine & "Password: " & Password, "GENERATED ACCOUNT", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
                 End Using
@@ -92,6 +94,7 @@ Module mod_db
         Return lastValidId
     End Function
 
+
     'LOGIN ACCOUNT FOR STAFF
     Public Function staffLoginFunction(email As String, password As String) As Boolean
         Using connection As New SQLiteConnection(connectionString)
@@ -112,6 +115,65 @@ Module mod_db
         End Using
     End Function
 
+    'STAFF UPDATE INFORMATION
+    Public Sub staffUpdateInformation(ByVal idNum As Integer, ByVal firstname As String, ByVal Lastname As String, ByVal position As String, ByVal selectedDate As String, ByVal Password As String, ByVal email As String)
 
+        Try
+            Using connection As New SQLiteConnection(connectionString)
+                connection.Open()
+                Using command As New SQLiteCommand("UPDATE user_staff SET firstname = @FirstName, lastname = @Lastname, position = @Position, emp_since = @Emp_since, password = @Password, email = @Email, status = @Status WHERE idNum = @idNum;", connection)
+                    Dim emailDomain As String = "@gvalias.com"
+                    Dim status As String = "Active"
+                    Dim concatenatedEmail As String = $"{firstname.ToLower().Substring(0, 1)}.{Lastname.ToLower()}.{idNum}{emailDomain}"
+
+                    command.Parameters.AddWithValue("@idNum", idNum)
+                    command.Parameters.AddWithValue("@FirstName", firstname)
+                    command.Parameters.AddWithValue("@Lastname", Lastname)
+                    command.Parameters.AddWithValue("@Position", position)
+                    command.Parameters.AddWithValue("@Emp_since", selectedDate)
+                    command.Parameters.AddWithValue("@Password", Password)
+                    command.Parameters.AddWithValue("@Email", concatenatedEmail)
+                    command.Parameters.AddWithValue("@Status", status)
+                    command.ExecuteNonQuery()
+                    MessageBox.Show("Email: " & concatenatedEmail & vbNewLine & "Password: " & Password, "GENERATED ACCOUNT", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                End Using
+            End Using
+        Catch ex As SQLiteException
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
+
+    End Sub
+
+
+    'STAFF DELETE INFORMATION
+    Public Sub staffDeleteInformation(ByVal idNum As Integer, ByVal firstname As String, ByVal Lastname As String, ByVal position As String, ByVal selectedDate As String, ByVal Password As String, ByVal email As String)
+
+        Try
+            Using connection As New SQLiteConnection(connectionString)
+                connection.Open()
+                Using command As New SQLiteCommand("UPDATE user_staff SET firstname = @FirstName, lastname = @Lastname, position = @Position, emp_since = @Emp_since, password = @Password, email = @Email, status = @Status WHERE idNum = @idNum;", connection)
+                    Dim emailDomain As String = "@gvalias.com"
+                    Dim status As String = "Inactive"
+                    Dim concatenatedEmail As String = $"{firstname.ToLower().Substring(0, 1)}.{Lastname.ToLower()}.{idNum}{emailDomain}"
+
+                    command.Parameters.AddWithValue("@idNum", idNum)
+                    command.Parameters.AddWithValue("@FirstName", firstname)
+                    command.Parameters.AddWithValue("@Lastname", Lastname)
+                    command.Parameters.AddWithValue("@Position", position)
+                    command.Parameters.AddWithValue("@Emp_since", selectedDate)
+                    command.Parameters.AddWithValue("@Password", Password)
+                    command.Parameters.AddWithValue("@Email", concatenatedEmail)
+                    command.Parameters.AddWithValue("@Status", status)
+                    command.ExecuteNonQuery()
+                    MessageBox.Show("Email: " & concatenatedEmail & vbNewLine & "Password: " & Password, "DELETED ACCOUNT", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                End Using
+            End Using
+        Catch ex As SQLiteException
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
+
+    End Sub
 
 End Module

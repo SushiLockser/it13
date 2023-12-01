@@ -23,7 +23,7 @@ Partial Class CreateAccount
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -35,7 +35,7 @@ Partial Class CreateAccount
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtPosition = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.dtpEmpSince = New System.Windows.Forms.DateTimePicker()
@@ -62,20 +62,20 @@ Partial Class CreateAccount
         Me.TextBox1.TabIndex = 24
         Me.TextBox1.Text = "Search Staff"
         '
-        'Button1
+        'btnDelete
         '
-        Me.Button1.BackColor = System.Drawing.Color.Firebrick
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold)
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button1.Location = New System.Drawing.Point(199, 59)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(76, 32)
-        Me.Button1.TabIndex = 27
-        Me.Button1.Text = "Delete"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnDelete.BackColor = System.Drawing.Color.Firebrick
+        Me.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDelete.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold)
+        Me.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnDelete.Location = New System.Drawing.Point(199, 59)
+        Me.btnDelete.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(76, 32)
+        Me.btnDelete.TabIndex = 27
+        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.UseVisualStyleBackColor = False
         '
         'btnSave
         '
@@ -194,20 +194,20 @@ Partial Class CreateAccount
         Me.Label6.TabIndex = 55
         Me.Label6.Text = "Employed Since"
         '
-        'Button2
+        'btnUpdate
         '
-        Me.Button2.BackColor = System.Drawing.Color.DarkGreen
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold)
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button2.Location = New System.Drawing.Point(110, 59)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(76, 32)
-        Me.Button2.TabIndex = 56
-        Me.Button2.Text = "Update"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnUpdate.BackColor = System.Drawing.Color.DarkGreen
+        Me.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUpdate.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold)
+        Me.btnUpdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnUpdate.Location = New System.Drawing.Point(110, 59)
+        Me.btnUpdate.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(76, 32)
+        Me.btnUpdate.TabIndex = 56
+        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.UseVisualStyleBackColor = False
         '
         'Button3
         '
@@ -256,11 +256,13 @@ Partial Class CreateAccount
         '
         'dgvStaff
         '
+        Me.dgvStaff.AllowUserToDeleteRows = False
         Me.dgvStaff.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvStaff.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
         Me.dgvStaff.Location = New System.Drawing.Point(19, 281)
         Me.dgvStaff.Name = "dgvStaff"
+        Me.dgvStaff.ReadOnly = True
         Me.dgvStaff.RowHeadersVisible = False
         Me.dgvStaff.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvStaff.Size = New System.Drawing.Size(704, 321)
@@ -270,36 +272,43 @@ Partial Class CreateAccount
         '
         Me.Column1.HeaderText = "ID NUMBER"
         Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
         '
         'Column2
         '
         Me.Column2.HeaderText = "FULL NAME"
         Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
         '
         'Column3
         '
         Me.Column3.HeaderText = "PASSWORD"
         Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
         '
         'Column4
         '
         Me.Column4.HeaderText = "POSITION"
         Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
         '
         'Column5
         '
         Me.Column5.HeaderText = "YEAR OF EMPLOYMENT"
         Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
         '
         'Column6
         '
         Me.Column6.HeaderText = "EMAIL"
         Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
         '
         'Column7
         '
         Me.Column7.HeaderText = "STATUS"
         Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
         '
         'CreateAccount
         '
@@ -311,7 +320,7 @@ Partial Class CreateAccount
         Me.Controls.Add(Me.dtpEmpSince)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txtPosition)
@@ -323,7 +332,7 @@ Partial Class CreateAccount
         Me.Controls.Add(Me.txtFirstname)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnSave)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.TextBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(2)
@@ -335,7 +344,7 @@ Partial Class CreateAccount
 
     End Sub
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnDelete As Button
     Friend WithEvents btnSave As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
@@ -347,7 +356,7 @@ Partial Class CreateAccount
     Friend WithEvents Label5 As Label
     Friend WithEvents txtPosition As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnUpdate As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Label7 As Label
     Friend WithEvents dtpEmpSince As DateTimePicker

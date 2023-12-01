@@ -2,7 +2,6 @@
 
 Public Class CreateAccount
     Dim Firstname, Lastname, position, Password, email, status As String
-
     Dim indexCount, idNum As Integer
     Dim selectedDate As String
     Dim fullname As String
@@ -24,11 +23,16 @@ Public Class CreateAccount
         Else
             CreateAccountStaff(Firstname, Lastname, position, selectedDate, Password, status)
             Add_StaffInformation(idNum, fullname, Password, position, selectedDate, email, status)
+            txtFirstname.Clear()
+            txtLastName.Clear()
+            txtPosition.Clear()
+            txtPassword.Clear()
         End If
 
     End Sub
 
-    Private Sub dgvStaff_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvStaff.CellClick
+    Private Sub dgvStaff_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvStaff.CellClick, dgvStaff.CellContentClick
+        indexCount = dgvStaff.CurrentRow.Index
         'ID
         idNum = dgvStaff.Rows(indexCount).Cells(0).Value.ToString
 
@@ -51,4 +55,36 @@ Public Class CreateAccount
         status = dgvStaff.Rows(indexCount).Cells(6).Value.ToString
 
     End Sub
+
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        Firstname = txtFirstname.Text
+        Lastname = txtLastName.Text
+        position = txtPosition.Text
+        Password = txtPassword.Text
+        selectedDate = dtpEmpSince.Value
+
+        If Firstname = "" Or Lastname = "" Or position = "" Or Password = "" Then
+            MessageBox.Show("Please fill up necessary details", "LOGIN UNSUCCESSFUL", MessageBoxButtons.RetryCancel)
+            txtFirstname.Clear()
+            txtLastName.Clear()
+            txtPosition.Clear()
+            txtPassword.Clear()
+        Else
+            staffUpdateInformation(idNum, Firstname, Lastname, position, selectedDate, Password, status)
+            Update_StaffInformation(indexCount, Firstname & " " & Lastname, Password, position, selectedDate, email, status)
+
+            txtFirstname.Clear()
+            txtLastName.Clear()
+            txtPosition.Clear()
+            txtPassword.Clear()
+        End If
+    End Sub
+
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+
+        staffDeleteInformation(idNum, Firstname, Lastname, position, selectedDate, Password, status)
+        Remove_StaffInformation(indexCount)
+
+    End Sub
+
 End Class
