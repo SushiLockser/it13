@@ -31,7 +31,6 @@ C:\Users\Lerog\Source\Repos\SushiLockser\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\
 C:\Users\Lerog\Source\Repos\SushiLockser\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj_2.SearchPage.resources
 C:\Users\Lerog\Source\Repos\SushiLockser\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj_2.Resources.resources
 C:\Users\Lerog\Source\Repos\SushiLockser\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj_2.StaffLogin.resources
-C:\Users\Lerog\Source\Repos\SushiLockser\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj_2.StaffSideBar.resources
 C:\Users\Lerog\Source\Repos\SushiLockser\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj_2.WelcomePage.resources
 C:\Users\Lerog\Source\Repos\SushiLockser\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj-2.vbproj.GenerateResource.cache
 C:\Users\Lerog\Source\Repos\SushiLockser\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj-2.vbproj.CoreCompileInputs.cache

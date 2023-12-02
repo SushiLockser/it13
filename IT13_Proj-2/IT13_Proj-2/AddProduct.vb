@@ -2,7 +2,7 @@
     Dim productType, quality, supplier As String
     Dim quantity, quantityUsed, price As Integer
     Dim num1, num2, total As Double
-
+    Dim currentDate As DateTime
     Private Sub AddProduct_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' this is supposed to be sa form
         lblProductName.Text = AddProject.txtProductName.Text
@@ -23,8 +23,6 @@
             txtPrice.Clear()
             txtSupplier.Clear()
         Else
-            add_product(quantity, quantityUsed, productType, quality, price, supplier)
-            MessageBox.Show("PRODUCT ADDED")
 
             'TOTAL VALUE
             num1 = CDbl(txtQuantity.Text)
@@ -34,8 +32,12 @@
             total = getValue()
             lblTotalValue.Text = total
 
-            'GET DATE
-            get_date(lblUpdatedAt.Text)
+            'SET DATE
+            currentDate = set_date()
+            lblUpdatedAt.Text = currentDate
+
+            add_product(quantity, quantityUsed, productType, quality, price, supplier, currentDate)
+            MessageBox.Show("PRODUCT ADDED")
 
         End If
     End Sub

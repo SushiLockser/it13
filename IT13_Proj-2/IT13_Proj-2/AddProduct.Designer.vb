@@ -41,7 +41,7 @@ Partial Class AddProduct
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblProductName = New System.Windows.Forms.Label()
         Me.btnSave = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
         Me.cbProductType = New System.Windows.Forms.ComboBox()
         Me.cbQuality = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
@@ -252,20 +252,20 @@ Partial Class AddProduct
         Me.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnSave.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btnCancel
         '
-        Me.Button2.BackColor = System.Drawing.Color.Gray
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(619, 133)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(70, 36)
-        Me.Button2.TabIndex = 75
-        Me.Button2.Text = "Cancel"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnCancel.BackColor = System.Drawing.Color.Gray
+        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnCancel.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCancel.Location = New System.Drawing.Point(619, 133)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(70, 36)
+        Me.btnCancel.TabIndex = 75
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = False
         '
         'cbProductType
         '
@@ -292,7 +292,7 @@ Partial Class AddProduct
         Me.ClientSize = New System.Drawing.Size(727, 576)
         Me.Controls.Add(Me.cbQuality)
         Me.Controls.Add(Me.cbProductType)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
@@ -340,7 +340,7 @@ Partial Class AddProduct
     Friend WithEvents txtQuantity As TextBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents lblProductName As Label
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnCancel As Button
     Friend WithEvents cbProductType As ComboBox
     Friend WithEvents cbQuality As ComboBox
 End Class

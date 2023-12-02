@@ -51,9 +51,10 @@ Module mod_CRUD
     End Function
 
     ' updated at
-    Public Sub get_date(ByVal time As DateTime)
-        time = DateTime.Now
+    Public Function set_date() As String
+        Dim time As DateTime = DateTime.Now
         Dim format As String = "ddd MM/dd/yyyy HH:mm"
-        Console.WriteLine(time.ToString(format))
-    End Sub
+        Return time.ToString(format)
+    End Function
+
 End Module

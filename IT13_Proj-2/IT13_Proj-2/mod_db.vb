@@ -180,13 +180,15 @@ Module mod_db
     ' ----------------------------- PRODUCTS ------------------------------------
 
     'ADD PRODUCT
-    Public Sub add_product(ByVal productquantity As Integer, ByVal productquantityused As Integer, ByVal producttype As String, ByVal productquality As String, ByVal productprice As Integer, ByVal productsupplier As String)
+    Public Sub add_product(ByVal productquantity As Integer, ByVal productquantityused As Integer, ByVal producttype As String, ByVal productquality As String, ByVal productprice As Integer, ByVal productsupplier As String, ByVal productdateupdated As DateTime)
 
         Try
             Using connection As New SQLiteConnection(connectionString)
                 connection.Open()
                 Dim productname As String = AddProject.txtProductName.Text
-                Using command As New SQLiteCommand("INSERT INTO product (productName, productQuantity, productQuantityUsed, productType, productQuality, productPrice, productSupplier) VALUES (@ProductName, @ProductQuantity, @ProductQuantityUsed, @ProductType, @ProductQuality, @ProductPrice, @ProductSupplier);", connection)
+                Dim producttotalvalue As Double = AddProduct.lblTotalValue.Text
+                productdateupdated = mod_CRUD.set_date()
+                Using command As New SQLiteCommand("INSERT INTO product (productName, productQuantity, productQuantityUsed, productType, productQuality, productPrice, productSupplier, productTotalValue, productDateUpdated) VALUES (@ProductName, @ProductQuantity, @ProductQuantityUsed, @ProductType, @ProductQuality, @ProductPrice, @ProductSupplier, @ProductTotalValue, @ProductDateUpdated);", connection)
                     command.Parameters.AddWithValue("@ProductName", productname)
                     command.Parameters.AddWithValue("@ProductQuantity", productquantity)
                     command.Parameters.AddWithValue("@ProductQuantityUsed", productquantityused)
@@ -194,6 +196,8 @@ Module mod_db
                     command.Parameters.AddWithValue("@ProductQuality", productquality)
                     command.Parameters.AddWithValue("@ProductPrice", productprice)
                     command.Parameters.AddWithValue("@ProductSupplier", productsupplier)
+                    command.Parameters.AddWithValue("@ProductTotalValue", producttotalvalue)
+                    command.Parameters.AddWithValue("@ProductDateUpdated", productdateupdated)
                     command.ExecuteNonQuery()
                 End Using
             End Using
