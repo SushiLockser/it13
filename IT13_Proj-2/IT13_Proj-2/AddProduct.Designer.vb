@@ -22,7 +22,7 @@ Partial Class AddProduct
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnBack = New System.Windows.Forms.Button()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -33,9 +33,9 @@ Partial Class AddProduct
         Me.txtQuantityUsed = New System.Windows.Forms.TextBox()
         Me.txtSupplier = New System.Windows.Forms.TextBox()
         Me.txtPrice = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.lblUpdatedAt = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.lblTotalValue = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtQuantity = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -46,16 +46,16 @@ Partial Class AddProduct
         Me.cbQuality = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
-        'Button1
+        'btnBack
         '
-        Me.Button1.Font = New System.Drawing.Font("Arial", 10.0!)
-        Me.Button1.Location = New System.Drawing.Point(9, 10)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(62, 26)
-        Me.Button1.TabIndex = 74
-        Me.Button1.Text = "< back"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnBack.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.btnBack.Location = New System.Drawing.Point(9, 10)
+        Me.btnBack.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(62, 26)
+        Me.btnBack.TabIndex = 74
+        Me.btnBack.Text = "< back"
+        Me.btnBack.UseVisualStyleBackColor = True
         '
         'Label12
         '
@@ -160,17 +160,17 @@ Partial Class AddProduct
         Me.txtPrice.Size = New System.Drawing.Size(191, 23)
         Me.txtPrice.TabIndex = 63
         '
-        'Label7
+        'lblUpdatedAt
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(244, 94)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(23, 18)
-        Me.Label7.TabIndex = 57
-        Me.Label7.Text = "---"
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblUpdatedAt.AutoSize = True
+        Me.lblUpdatedAt.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUpdatedAt.Location = New System.Drawing.Point(244, 94)
+        Me.lblUpdatedAt.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblUpdatedAt.Name = "lblUpdatedAt"
+        Me.lblUpdatedAt.Size = New System.Drawing.Size(23, 18)
+        Me.lblUpdatedAt.TabIndex = 57
+        Me.lblUpdatedAt.Text = "---"
+        Me.lblUpdatedAt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label6
         '
@@ -183,17 +183,17 @@ Partial Class AddProduct
         Me.Label6.TabIndex = 56
         Me.Label6.Text = "Updated at : "
         '
-        'Label5
+        'lblTotalValue
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(94, 94)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(23, 18)
-        Me.Label5.TabIndex = 55
-        Me.Label5.Text = "---"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblTotalValue.AutoSize = True
+        Me.lblTotalValue.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalValue.Location = New System.Drawing.Point(94, 94)
+        Me.lblTotalValue.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblTotalValue.Name = "lblTotalValue"
+        Me.lblTotalValue.Size = New System.Drawing.Size(23, 18)
+        Me.lblTotalValue.TabIndex = 55
+        Me.lblTotalValue.Text = "---"
+        Me.lblTotalValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label4
         '
@@ -270,7 +270,7 @@ Partial Class AddProduct
         'cbProductType
         '
         Me.cbProductType.FormattingEnabled = True
-        Me.cbProductType.Items.AddRange(New Object() {"UNSA", "MANE"})
+        Me.cbProductType.Items.AddRange(New Object() {"Structural Materials", "Masonry Materials", "Roofing Materials", "Doors and Windows", "Flooring Materials", "Finishing Materials", "Insulation Materials", "Electrical Components", "Plumbing Materials", "HVAC Systems", "Fasteners and Connectors", "Construction Tools and Equipment", "Safety Equipment", "Architectural Hardware", "Lighting Fixtures"})
         Me.cbProductType.Location = New System.Drawing.Point(9, 270)
         Me.cbProductType.Name = "cbProductType"
         Me.cbProductType.Size = New System.Drawing.Size(191, 21)
@@ -293,7 +293,7 @@ Partial Class AddProduct
         Me.Controls.Add(Me.cbQuality)
         Me.Controls.Add(Me.cbProductType)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
@@ -304,9 +304,9 @@ Partial Class AddProduct
         Me.Controls.Add(Me.txtQuantityUsed)
         Me.Controls.Add(Me.txtSupplier)
         Me.Controls.Add(Me.txtPrice)
-        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.lblUpdatedAt)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.lblTotalValue)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txtQuantity)
@@ -321,7 +321,7 @@ Partial Class AddProduct
 
     End Sub
 
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnBack As Button
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
@@ -332,9 +332,9 @@ Partial Class AddProduct
     Friend WithEvents txtQuantityUsed As TextBox
     Friend WithEvents txtSupplier As TextBox
     Friend WithEvents txtPrice As TextBox
-    Friend WithEvents Label7 As Label
+    Friend WithEvents lblUpdatedAt As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
+    Friend WithEvents lblTotalValue As Label
     Friend WithEvents btnSave As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents txtQuantity As TextBox

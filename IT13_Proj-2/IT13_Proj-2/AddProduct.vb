@@ -1,6 +1,8 @@
 ﻿Public Class AddProduct
     Dim productType, quality, supplier As String
     Dim quantity, quantityUsed, price As Integer
+    Dim num1, num2, total As Double
+
     Private Sub AddProduct_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' this is supposed to be sa form
         lblProductName.Text = AddProject.txtProductName.Text
@@ -23,6 +25,18 @@
         Else
             add_product(quantity, quantityUsed, productType, quality, price, supplier)
             MessageBox.Show("PRODUCT ADDED")
+
+            'TOTAL VALUE
+            num1 = CDbl(txtQuantity.Text)
+            num2 = CDbl(txtPrice.Text)
+
+            Get_Value(num1, num2)
+            total = getValue()
+            lblTotalValue.Text = total
+
+            'GET DATE
+            get_date(lblUpdatedAt.Text)
+
         End If
     End Sub
 End Class

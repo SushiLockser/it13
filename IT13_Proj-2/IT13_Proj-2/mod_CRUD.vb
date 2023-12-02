@@ -34,4 +34,26 @@ Module mod_CRUD
     Public Sub Remove_StaffInformation(ByVal rowIndex As Integer)
         CreateAccount.dgvStaff.Rows.RemoveAt(rowIndex)
     End Sub
+
+    ' ---------------------- PRODUCTS ----------------------
+
+    Dim qty, prc, multiply As Double
+
+    ' total value
+    Public Sub Get_Value(ByVal num1 As Double, ByVal num2 As Double)
+        qty = num1
+        prc = num2
+    End Sub
+
+    Public Function getValue()
+        multiply = qty * prc
+        Return multiply
+    End Function
+
+    ' updated at
+    Public Sub get_date(ByVal time As DateTime)
+        time = DateTime.Now
+        Dim format As String = "ddd MM/dd/yyyy HH:mm"
+        Console.WriteLine(time.ToString(format))
+    End Sub
 End Module
