@@ -176,4 +176,31 @@ Module mod_db
 
     End Sub
 
+
+    ' ----------------------------- PRODUCTS ------------------------------------
+
+    'ADD PRODUCT
+    Public Sub add_product(ByVal productquantity As Integer, ByVal productquantityused As Integer, ByVal producttype As String, ByVal productquality As String, ByVal productprice As Integer, ByVal productsupplier As String)
+
+        Try
+            Using connection As New SQLiteConnection(connectionString)
+                connection.Open()
+                Dim productname As String = AddProject.txtProductName.Text
+                Using command As New SQLiteCommand("INSERT INTO product (productName, productQuantity, productQuantityUsed, productType, productQuality, productPrice, productSupplier) VALUES (@ProductName, @ProductQuantity, @ProductQuantityUsed, @ProductType, @ProductQuality, @ProductPrice, @ProductSupplier);", connection)
+                    command.Parameters.AddWithValue("@ProductName", productname)
+                    command.Parameters.AddWithValue("@ProductQuantity", productquantity)
+                    command.Parameters.AddWithValue("@ProductQuantityUsed", productquantityused)
+                    command.Parameters.AddWithValue("@ProductType", producttype)
+                    command.Parameters.AddWithValue("@ProductQuality", productquality)
+                    command.Parameters.AddWithValue("@ProductPrice", productprice)
+                    command.Parameters.AddWithValue("@ProductSupplier", productsupplier)
+                    command.ExecuteNonQuery()
+                End Using
+            End Using
+        Catch ex As SQLiteException
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
+
+    End Sub
+
 End Module
