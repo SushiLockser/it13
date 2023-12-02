@@ -33,7 +33,7 @@ Partial Class ViewProject
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.btnAddProj = New System.Windows.Forms.Button()
+        Me.btnAddProduct = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -91,9 +91,9 @@ Partial Class ViewProject
         Me.Label2.Font = New System.Drawing.Font("Helvetica", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(12, 87)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(230, 40)
+        Me.Label2.Size = New System.Drawing.Size(413, 40)
         Me.Label2.TabIndex = 29
-        Me.Label2.Text = "Project Name"
+        Me.Label2.Text = "Change to Product Name"
         '
         'Label7
         '
@@ -137,21 +137,21 @@ Partial Class ViewProject
         Me.Label4.TabIndex = 34
         Me.Label4.Text = "Total Value"
         '
-        'btnAddProj
+        'btnAddProduct
         '
-        Me.btnAddProj.BackColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(120, Byte), Integer))
-        Me.btnAddProj.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnAddProj.Font = New System.Drawing.Font("Helvetica", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddProj.ForeColor = System.Drawing.Color.White
-        Me.btnAddProj.Image = Global.IT13_Proj_2.My.Resources.Resources.Add_box__1_
-        Me.btnAddProj.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAddProj.Location = New System.Drawing.Point(808, 187)
-        Me.btnAddProj.Name = "btnAddProj"
-        Me.btnAddProj.Size = New System.Drawing.Size(154, 44)
-        Me.btnAddProj.TabIndex = 33
-        Me.btnAddProj.Text = "Add Product"
-        Me.btnAddProj.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnAddProj.UseVisualStyleBackColor = False
+        Me.btnAddProduct.BackColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnAddProduct.Font = New System.Drawing.Font("Helvetica", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddProduct.ForeColor = System.Drawing.Color.White
+        Me.btnAddProduct.Image = Global.IT13_Proj_2.My.Resources.Resources.Add_box__1_
+        Me.btnAddProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAddProduct.Location = New System.Drawing.Point(808, 187)
+        Me.btnAddProduct.Name = "btnAddProduct"
+        Me.btnAddProduct.Size = New System.Drawing.Size(154, 44)
+        Me.btnAddProduct.TabIndex = 33
+        Me.btnAddProduct.Text = "Add Product"
+        Me.btnAddProduct.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnAddProduct.UseVisualStyleBackColor = False
         '
         'Button6
         '
@@ -192,7 +192,7 @@ Partial Class ViewProject
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.btnAddProj)
+        Me.Controls.Add(Me.btnAddProduct)
         Me.Controls.Add(Me.Button6)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "ViewProject"
@@ -214,7 +214,7 @@ Partial Class ViewProject
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents btnAddProj As Button
+    Friend WithEvents btnAddProduct As Button
     Friend WithEvents Button6 As Button
     Friend WithEvents Button2 As Button
 End Class

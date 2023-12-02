@@ -25,4 +25,12 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         childForm(CreateAccount)
     End Sub
+
+    Private Sub btnAccountPage_Click(sender As Object, e As EventArgs) Handles btnAccountPage.Click
+        childForm(Profile)
+    End Sub
+
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+        Me.Close()
+    End Sub
 End Class

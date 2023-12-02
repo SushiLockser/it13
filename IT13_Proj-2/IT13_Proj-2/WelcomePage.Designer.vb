@@ -35,10 +35,10 @@ Partial Class WelcomePage
         '
         Me.Panel1.BackgroundImage = Global.IT13_Proj_2.My.Resources.Resources.Untitled_design__1_
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel1.Location = New System.Drawing.Point(348, 73)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel1.Location = New System.Drawing.Point(464, 90)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(202, 206)
+        Me.Panel1.Size = New System.Drawing.Size(269, 254)
         Me.Panel1.TabIndex = 0
         '
         'btnAdmin
@@ -47,10 +47,10 @@ Partial Class WelcomePage
         Me.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAdmin.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold)
         Me.btnAdmin.ForeColor = System.Drawing.Color.Snow
-        Me.btnAdmin.Location = New System.Drawing.Point(240, 479)
-        Me.btnAdmin.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnAdmin.Location = New System.Drawing.Point(320, 590)
+        Me.btnAdmin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnAdmin.Name = "btnAdmin"
-        Me.btnAdmin.Size = New System.Drawing.Size(181, 32)
+        Me.btnAdmin.Size = New System.Drawing.Size(241, 39)
         Me.btnAdmin.TabIndex = 7
         Me.btnAdmin.Text = "Admin"
         Me.btnAdmin.UseVisualStyleBackColor = False
@@ -61,10 +61,10 @@ Partial Class WelcomePage
         Me.btnStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnStaff.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold)
         Me.btnStaff.ForeColor = System.Drawing.Color.Snow
-        Me.btnStaff.Location = New System.Drawing.Point(478, 479)
-        Me.btnStaff.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnStaff.Location = New System.Drawing.Point(637, 590)
+        Me.btnStaff.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnStaff.Name = "btnStaff"
-        Me.btnStaff.Size = New System.Drawing.Size(181, 32)
+        Me.btnStaff.Size = New System.Drawing.Size(241, 39)
         Me.btnStaff.TabIndex = 8
         Me.btnStaff.Text = "Staff"
         Me.btnStaff.UseVisualStyleBackColor = False
@@ -73,10 +73,9 @@ Partial Class WelcomePage
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Arial", 32.0!, System.Drawing.FontStyle.Bold)
-        Me.Label3.Location = New System.Drawing.Point(262, 282)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Location = New System.Drawing.Point(349, 347)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(410, 51)
+        Me.Label3.Size = New System.Drawing.Size(514, 63)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Welcom to GVAlias"
         '
@@ -84,10 +83,9 @@ Partial Class WelcomePage
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Arial", 32.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(145, 325)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(193, 400)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(657, 51)
+        Me.Label1.Size = New System.Drawing.Size(824, 63)
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Construction Inventory System"
         '
@@ -95,19 +93,18 @@ Partial Class WelcomePage
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Arial", 10.0!)
-        Me.Label4.Location = New System.Drawing.Point(356, 448)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Location = New System.Drawing.Point(475, 551)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(211, 16)
+        Me.Label4.Size = New System.Drawing.Size(248, 19)
         Me.Label4.TabIndex = 11
         Me.Label4.Text = "What is your role in the copany?"
         '
         'WelcomePage
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.ClientSize = New System.Drawing.Size(891, 614)
+        Me.ClientSize = New System.Drawing.Size(1188, 756)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label3)
@@ -115,8 +112,9 @@ Partial Class WelcomePage
         Me.Controls.Add(Me.btnAdmin)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "WelcomePage"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "WelcomePage"
         Me.ResumeLayout(False)
         Me.PerformLayout()

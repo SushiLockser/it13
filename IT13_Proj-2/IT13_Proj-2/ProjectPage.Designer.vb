@@ -46,9 +46,9 @@ Partial Class projectPage
         Me.Label2.Font = New System.Drawing.Font("Helvetica", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(17, 39)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(131, 40)
+        Me.Label2.Size = New System.Drawing.Size(149, 40)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Project"
+        Me.Label2.Text = "Projects"
         '
         'TextBox1
         '

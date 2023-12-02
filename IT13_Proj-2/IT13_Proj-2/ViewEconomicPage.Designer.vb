@@ -23,14 +23,14 @@ Partial Class ViewEconomicPage
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ViewEconomicPage))
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnBack = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -43,15 +43,15 @@ Partial Class ViewEconomicPage
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button1
+        'btnBack
         '
-        Me.Button1.Font = New System.Drawing.Font("Helvetica", 10.0!)
-        Me.Button1.Location = New System.Drawing.Point(19, 22)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(83, 32)
-        Me.Button1.TabIndex = 53
-        Me.Button1.Text = "< back"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnBack.Font = New System.Drawing.Font("Helvetica", 10.0!)
+        Me.btnBack.Location = New System.Drawing.Point(19, 22)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(83, 32)
+        Me.btnBack.TabIndex = 53
+        Me.btnBack.Text = "< back"
+        Me.btnBack.UseVisualStyleBackColor = True
         '
         'Label2
         '
@@ -92,6 +92,16 @@ Partial Class ViewEconomicPage
         Me.Panel1.Size = New System.Drawing.Size(356, 349)
         Me.Panel1.TabIndex = 57
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Helvetica", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(42, 145)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(301, 40)
+        Me.Label5.TabIndex = 60
+        Me.Label5.Text = "This is the picture"
+        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption
@@ -110,16 +120,6 @@ Partial Class ViewEconomicPage
         Me.Label3.Size = New System.Drawing.Size(281, 40)
         Me.Label3.TabIndex = 59
         Me.Label3.Text = "This is the graph"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Helvetica", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(42, 145)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(301, 40)
-        Me.Label5.TabIndex = 60
-        Me.Label5.Text = "This is the picture"
         '
         'DataGridView1
         '
@@ -180,7 +180,7 @@ Partial Class ViewEconomicPage
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnBack)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ViewEconomicPage"
@@ -195,7 +195,7 @@ Partial Class ViewEconomicPage
 
     End Sub
 
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnBack As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label1 As Label
