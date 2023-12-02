@@ -29,7 +29,7 @@ Partial Class sideBar
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lblAdmin = New System.Windows.Forms.Label()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.btnDashboardPage = New System.Windows.Forms.Button()
         Me.btnProjectPage = New System.Windows.Forms.Button()
@@ -95,7 +95,7 @@ Partial Class sideBar
         Me.Panel1.BackgroundImage = Global.IT13_Proj_2.My.Resources.Resources.Frame_123
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Controls.Add(Me.lblAdmin)
         Me.Panel1.Controls.Add(Me.btnLogout)
         Me.Panel1.Controls.Add(Me.btnDashboardPage)
         Me.Panel1.Controls.Add(Me.btnProjectPage)
@@ -127,17 +127,17 @@ Partial Class sideBar
         Me.Button1.Text = "Staff Accounts"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'Label4
+        'lblAdmin
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(171, 30)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(76, 23)
-        Me.Label4.TabIndex = 17
-        Me.Label4.Text = "[Admin]"
+        Me.lblAdmin.AutoSize = True
+        Me.lblAdmin.BackColor = System.Drawing.Color.Transparent
+        Me.lblAdmin.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAdmin.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblAdmin.Location = New System.Drawing.Point(171, 30)
+        Me.lblAdmin.Name = "lblAdmin"
+        Me.lblAdmin.Size = New System.Drawing.Size(76, 23)
+        Me.lblAdmin.TabIndex = 17
+        Me.lblAdmin.Text = "[Admin]"
         '
         'btnLogout
         '
@@ -291,6 +291,6 @@ Partial Class sideBar
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents lblAdmin As Label
     Friend WithEvents Button1 As Button
 End Class

@@ -9,7 +9,8 @@
         Else
             If staffLoginFunction(email, pass) Then
                 MessageBox.Show("Welcome!", "LOGIN SUCCESSFULLY", MessageBoxButtons.OK)
-                StaffSideBar.Show()
+                sideBar.HideButtons()
+                sideBar.Show()
             Else
                 MessageBox.Show("Incorrect email or password.", "LOGIN UNSUCCESSFUL", MessageBoxButtons.RetryCancel)
             End If

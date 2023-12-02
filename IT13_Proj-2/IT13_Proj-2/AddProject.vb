@@ -7,7 +7,7 @@
             MessageBox.Show("Please enter the Product Name", "UNSUCCESSFUL", MessageBoxButtons.RetryCancel)
             txtProductName.Clear()
         Else
-            AddProduct.Show()
+            childForm(AddProduct)
         End If
     End Sub
 

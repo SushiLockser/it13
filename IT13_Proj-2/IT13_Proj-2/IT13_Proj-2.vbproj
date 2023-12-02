@@ -191,12 +191,6 @@
     <Compile Include="StaffLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StaffSideBar.Designer.vb">
-      <DependentUpon>StaffSideBar.vb</DependentUpon>
-    </Compile>
-    <Compile Include="StaffSideBar.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="ViewEconomicPage.Designer.vb">
       <DependentUpon>ViewEconomicPage.vb</DependentUpon>
     </Compile>
@@ -261,9 +255,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StaffLogin.resx">
       <DependentUpon>StaffLogin.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="StaffSideBar.resx">
-      <DependentUpon>StaffSideBar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewEconomicPage.resx">
       <DependentUpon>ViewEconomicPage.vb</DependentUpon>
