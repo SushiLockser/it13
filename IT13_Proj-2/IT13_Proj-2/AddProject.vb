@@ -7,8 +7,12 @@
             MessageBox.Show("Please enter the Product Name", "UNSUCCESSFUL", MessageBoxButtons.RetryCancel)
             txtProductName.Clear()
         Else
-            childForm(AddProduct)
+            childForm(projectPage)
         End If
+    End Sub
+
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        Me.Close()
     End Sub
 
 End Class

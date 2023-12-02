@@ -26,7 +26,8 @@ Partial Class AddProject
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtProductName = New System.Windows.Forms.TextBox()
         Me.btnSave = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label2
@@ -35,14 +36,14 @@ Partial Class AddProject
         Me.Label2.Font = New System.Drawing.Font("Arial", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(12, 41)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(237, 38)
+        Me.Label2.Size = New System.Drawing.Size(199, 38)
         Me.Label2.TabIndex = 55
-        Me.Label2.Text = "Product Name"
+        Me.Label2.Text = "Add Project"
         '
         'txtProductName
         '
         Me.txtProductName.Font = New System.Drawing.Font("Arial", 16.0!)
-        Me.txtProductName.Location = New System.Drawing.Point(19, 110)
+        Me.txtProductName.Location = New System.Drawing.Point(19, 146)
         Me.txtProductName.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtProductName.Name = "txtProductName"
         Me.txtProductName.Size = New System.Drawing.Size(513, 38)
@@ -61,24 +62,35 @@ Partial Class AddProject
         Me.btnSave.Text = "Save"
         Me.btnSave.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btnCancel
         '
-        Me.Button2.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Button2.Location = New System.Drawing.Point(367, 238)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(165, 54)
-        Me.Button2.TabIndex = 58
-        Me.Button2.Text = "Cancel"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnCancel.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.btnCancel.Location = New System.Drawing.Point(367, 238)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(165, 54)
+        Me.btnCancel.TabIndex = 58
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Helvetica", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(15, 123)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(172, 21)
+        Me.Label6.TabIndex = 59
+        Me.Label6.Text = "Enter Project Name:"
         '
         'AddProject
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(580, 313)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.txtProductName)
         Me.Controls.Add(Me.Label2)
@@ -95,5 +107,6 @@ Partial Class AddProject
     Friend WithEvents Label2 As Label
     Friend WithEvents txtProductName As TextBox
     Friend WithEvents btnSave As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnCancel As Button
+    Friend WithEvents Label6 As Label
 End Class

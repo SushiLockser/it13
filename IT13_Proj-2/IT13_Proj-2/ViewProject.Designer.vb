@@ -91,9 +91,9 @@ Partial Class ViewProject
         Me.Label2.Font = New System.Drawing.Font("Helvetica", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(12, 87)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(413, 40)
+        Me.Label2.Size = New System.Drawing.Size(401, 40)
         Me.Label2.TabIndex = 29
-        Me.Label2.Text = "Change to Product Name"
+        Me.Label2.Text = "Change to Project Name"
         '
         'Label7
         '

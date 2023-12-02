@@ -78,7 +78,6 @@ C:\Users\User\source\repos\it13_repo\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13
 C:\Users\User\source\repos\it13_repo\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj_2.SearchPage.resources
 C:\Users\User\source\repos\it13_repo\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj_2.Resources.resources
 C:\Users\User\source\repos\it13_repo\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj_2.StaffLogin.resources
-C:\Users\User\source\repos\it13_repo\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj_2.StaffSideBar.resources
 C:\Users\User\source\repos\it13_repo\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj_2.WelcomePage.resources
 C:\Users\User\source\repos\it13_repo\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj-2.vbproj.GenerateResource.cache
 C:\Users\User\source\repos\it13_repo\it13\IT13_Proj-2\IT13_Proj-2\obj\Debug\IT13_Proj-2.vbproj.CoreCompileInputs.cache
