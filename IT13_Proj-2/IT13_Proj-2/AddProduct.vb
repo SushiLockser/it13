@@ -27,7 +27,6 @@
             'TOTAL VALUE
             num1 = CDbl(txtQuantity.Text)
             num2 = CDbl(txtPrice.Text)
-
             Get_Value(num1, num2)
             total = getValue()
             lblTotalValue.Text = total
@@ -35,10 +34,6 @@
             'SET DATE
             currentDate = set_date()
             lblUpdatedAt.Text = currentDate
-
-            add_product(quantity, quantityUsed, productType, quality, price, supplier, currentDate)
-            MessageBox.Show("PRODUCT ADDED")
-
         End If
     End Sub
 End Class
